@@ -1,0 +1,30 @@
+[
+      {
+        "name": "t1",
+        "carbohydrate": 100,
+        "protein": 10,
+        "fat": 5,
+        "kcal": 600
+      },
+      {
+        "name": "t2",
+        "carbohydrate": 100,
+        "protein": 15,
+        "fat": 10,
+        "kcal": 700
+      },
+      {
+        "name": "t3",
+        "carbohydrate": 150,
+        "protein": 20,
+        "fat": 15,
+        "kcal": 800
+      },
+      {
+        "name": "t4",
+        "carbohydrate": 200,
+        "protein": 25,
+        "fat": 20,
+        "kcal": 900
+      }
+  ]

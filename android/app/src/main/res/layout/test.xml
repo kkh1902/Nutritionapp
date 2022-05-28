@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="#0b000000"
+    >
+    <LinearLayout
+        android:id="@+id/wrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="256dp"
+            android:background="@drawable/header_wrap"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:orientation="vertical"
+            android:elevation="24dp">
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/btn_menu"-->
+<!--                android:layout_width="24dp"-->
+<!--                android:layout_height="24dp"-->
+<!--                android:background="@drawable/btn_menu"-->
+<!--                android:backgroundTint="@color/color_2" />-->
+
+            <TextView
+                android:id="@+id/text_date"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/cafe"
+                android:text="22.01.01"
+                android:textColor="@color/white"
+                android:textSize="40dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/content_wrap"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/text_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cafe"
+                    android:text="메인텍스트입니다."
+                    android:textColor="@color/color_2"
+                    android:textSize="16dp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00ff0000"
+                    android:text="아침"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/cafe"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp" />
+                <Button
+                    android:id="@+id/btn_t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00ff0000"
+                    android:text="점심"
+                    android:fontFamily="@font/cafe"
+                    android:textColor="@color/gray"
+                    android:textAlignment="center"
+                    android:textSize="16dp"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp" />
+                <Button
+                    android:id="@+id/btn_t3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:background="#00ff0000"
+                    android:text="저녁"
+                    android:fontFamily="@font/cafe"
+                    android:textColor="@color/gray"
+                    android:textAlignment="center"
+                    android:textSize="16dp"
+
+                    android:minHeight="0dp"
+                    android:minWidth="0dp" />
+                <Button
+                    android:id="@+id/btn_t4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00ff0000"
+                    android:text="야식"
+                    android:fontFamily="@font/cafe"
+                    android:textColor="@color/gray"
+                    android:textAlignment="center"
+                    android:textSize="16dp"
+
+                    android:minHeight="0dp"
+                    android:minWidth="0dp" />
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:textAlignment="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp">
+
+                    <LinearLayout
+                        android:id="@+id/content_t1"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginBottom="24dp"
+                        android:background="@drawable/content_wrap"
+                        android:minWidth="200dp"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:elevation="12dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/cafe"
+                            android:text="탄수화물"
+                            android:textColor="@color/black" />
+                        <View
+                            android:layout_width="160dp"
+                            android:layout_height="12dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/bar"
+                            android:elevation="4dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/cafe"
+                            android:text="지방"
+                            android:textColor="@color/black" />
+                        <View
+                            android:layout_width="30dp"
+                            android:layout_height="12dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/bar"
+                            android:elevation="4dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/cafe"
+                            android:text="단백질"
+                            android:textColor="@color/black" />
+                        <View
+                            android:layout_width="80dp"
+                            android:layout_height="12dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/bar"
+                            android:elevation="4dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/cafe"
+                            android:text="열량"
+                            android:textColor="@color/black" />
+                        <View
+                            android:layout_width="120dp"
+                            android:layout_height="12dp"
+                            android:background="@drawable/bar"
+                            android:elevation="4dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/content_t2"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginBottom="24dp"
+                        android:background="@drawable/content_wrap"
+                        android:minWidth="200dp"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:elevation="12dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/cafe"
+                            android:text="탄수화물"
+                            android:textColor="@color/black" />
+                        <View
+                            android:layout_width="160dp"
+                            android:layout_height="12dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/bar"
+                            android:elevation="4dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/cafe"
+                            android:text="지방"
+                            android:textColor="@color/black" />
+                        <View
+                            android:layout_width="30dp"
+                            android:layout_height="12dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/bar"
+                            android:elevation="4dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/cafe"
+                            android:text="단백질"
+                            android:textColor="@color/black" />
+                        <View
+                            android:layout_width="80dp"
+                            android:layout_height="12dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/bar"
+                            android:elevation="4dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/cafe"
+                            android:text="열량"
+                            android:textColor="@color/black" />
+                        <View
+                            android:layout_width="120dp"
+                            android:layout_height="12dp"
+                            android:background="@drawable/bar"
+                            android:elevation="4dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/wrap"
+        android:background="@color/white"
+        android:elevation="32dp"
+        android:layout_alignParentBottom="true">
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:menu="@menu/menu"
+            app:itemBackground="@color/white"
+            app:itemTextColor="@color/black"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            app:labelVisibilityMode="unlabeled">
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+    </LinearLayout>
+</RelativeLayout>

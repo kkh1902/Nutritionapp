@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/detail_wrap_header"
+        android:layout_width="match_parent"
+        android:layout_height="192px"
+        android:layout_alignParentTop="true">
+
+        <ImageButton
+            android:id="@+id/detail_btn_back"
+            android:layout_width="64px"
+            android:layout_height="64px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="64px"
+            android:background="@drawable/btn_back" />
+
+        <TextView
+            android:id="@+id/detail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/detail_btn_back"
+            android:fontFamily="@font/font_r"
+            android:text="Detail"
+            android:textColor="@color/black"
+            android:textSize="64px" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="1048px"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/detail_wrap_header"
+        android:background="@color/color_1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="192px"
+            android:background="@drawable/detail_wrap_content_bg" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="128px"
+            android:paddingLeft="64px"
+            android:paddingRight="64px">
+
+            <TextView
+                android:id="@+id/detail_text_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font_r"
+                android:text="N월 N일에 섭취한\n영양소 비율이에요!"
+                android:textColor="@color/white"
+                android:textSize="56px" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detail_text_date"
+                android:layout_marginTop="32px">
+
+                <View
+                    android:layout_width="24px"
+                    android:layout_height="640px"
+                    android:background="@drawable/bar"
+                    android:backgroundTint="@color/color_3" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/detail_wrap_attribute1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="64px"
+                        android:paddingRight="64px">
+
+                        <TextView
+                            android:id="@+id/detail_text_attribute1"
+                            android:layout_width="180px"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="24px"
+                            android:layout_marginBottom="24px"
+                            android:fontFamily="@font/font_b"
+                            android:text="탄수화물"
+                            android:textColor="@color/white"
+                            android:textSize="42px" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="24px"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="0dp"
+                            android:layout_toRightOf="@id/detail_text_attribute1"
+                            android:background="@drawable/bar"
+                            android:backgroundTint="@color/white" />
+
+                        <View
+                            android:id="@+id/detail_attribute1_data"
+                            android:layout_width="200px"
+                            android:layout_height="24px"
+                            android:layout_toRightOf="@id/detail_text_attribute1"
+                            android:background="@drawable/bar" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

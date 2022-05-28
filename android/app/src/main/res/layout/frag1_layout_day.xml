@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frag1_layout_month"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingLeft="436px"
+    android:paddingRight="436px">
+
+    <Button
+        android:id="@+id/frag1_btn_day1"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@drawable/selected_day"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="1"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day2"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="2"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day3"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="3"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day4"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="4"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day5"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="5"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day6"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="6"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day7"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="7"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day8"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="8"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day9"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="9"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day10"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="10"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day11"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="11"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day12"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="12"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day13"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="13"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day14"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="14"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day15"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="15"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day16"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="16"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day17"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="17"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day18"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="18"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day19"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="19"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day20"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="20"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day21"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="21"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day22"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="22"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day23"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="23"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day24"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="24"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day25"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="25"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day26"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="26"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day27"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="27"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day28"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="28"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day29"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="29"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day30"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="30"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+    <Button
+        android:id="@+id/frag1_btn_day31"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_margin="24px"
+        android:background="@color/invisible"
+        android:fontFamily="@font/font_r"
+        android:padding="0px"
+        android:text="31"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="36px" />
+
+
+</LinearLayout>
