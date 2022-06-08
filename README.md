@@ -1,5 +1,5 @@
-# Nutritionapp
+# 먹보 - Frontend
+### 
 
-Team project
-
-
+# 먹보 - Backend
+###
