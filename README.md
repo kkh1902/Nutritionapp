@@ -27,14 +27,27 @@
 
 ### &#10024; 먹보 주요 기능 &#10024;
 #### 1. 사용자의 음식 데이터를 통해 필요한 영양분에 맞는 음식 추천 (Algorithm) 구축
+
+</br>
+
 ![image](https://user-images.githubusercontent.com/91061890/172547686-f17daff9-fd98-4e73-a158-e09fc579df59.png)
 <br>한국 영양 학회에 따른 BMR공식(사용자의 스펙으로부터) 계산 하여 일일 탄수화물, 단백질, 지방 추천 및 부족한 영양소 확인
+
+</br>
+
 
 #### 2.약 2만여개의 음식 데이터(식약처 제공 데이터)를 2번의 데이터 가공을 통해 Data Base 구축
 ![image](https://user-images.githubusercontent.com/91061890/172547193-27c289df-8927-4798-a699-8af654cc5cbf.png)
 
+
+</br>
+
+
 #### 3.사용자 스펙 조회,기록,수정,삭제 연산 가능
 mysql 이미지(user)
+
+
+</br>
 
 ### &#128187;기술스택/라이브러리
 #### 기술스택
@@ -66,12 +79,20 @@ mysql 이미지(user)
     <td> 클린코드 </td>
   </tr>
   </table>
+  
+  
+</br>
+
 
 
 
 ### ⚙Node & npm Version
 node: v14.17.1  
 npm: 6.14.13  
+  
+  
+</br>
+
 
 ### &#127919; Backend Trouble Shooting
   
@@ -120,7 +141,7 @@ npm: 6.14.13
 
 
 
-
+</br>
 
 ### &#128526; About Us
 
