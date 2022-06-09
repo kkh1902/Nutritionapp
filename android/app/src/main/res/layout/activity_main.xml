@@ -1,0 +1,907 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/frag1_wrap_menu"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentTop="true">
+
+        <ImageButton
+            android:id="@+id/frag1_btn_profile"
+            android:layout_width="64px"
+            android:layout_height="64px"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="64px"
+            android:layout_marginRight="64px"
+            android:background="@color/invisible"
+            android:scaleType="fitCenter"
+            android:src="@drawable/profile" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/frag1_wrap_date"
+        android:layout_width="match_parent"
+        android:layout_height="512px"
+        android:layout_below="@+id/frag1_wrap_menu">
+
+        <ImageView
+            android:layout_width="192px"
+            android:layout_height="512px"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/frag1_wrap_date_bg" />
+
+        <HorizontalScrollView
+            android:id="@+id/frag1_wrap_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="64px"
+            android:paddingRight="64px"
+            android:scrollbars="none">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/frag1_layout_month"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="388px"
+                android:paddingRight="388px">
+
+                <Button
+                    android:id="@+id/frag1_btn_month1"
+                    android:layout_width="240px"
+                    android:layout_height="wrap_content"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="Jan"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="92px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_month2"
+                    android:layout_width="240px"
+                    android:layout_height="wrap_content"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_ul"
+                    android:padding="0px"
+                    android:text="Feb"
+                    android:textAllCaps="false"
+                    android:textColor="@color/gray"
+                    android:textSize="92px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_month3"
+                    android:layout_width="240px"
+                    android:layout_height="wrap_content"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_ul"
+                    android:padding="0px"
+                    android:text="Mar"
+                    android:textAllCaps="false"
+                    android:textColor="@color/gray"
+                    android:textSize="92px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_month4"
+                    android:layout_width="240px"
+                    android:layout_height="wrap_content"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_ul"
+                    android:padding="0px"
+                    android:text="Apr"
+                    android:textAllCaps="false"
+                    android:textColor="@color/gray"
+                    android:textSize="92px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_month5"
+                    android:layout_width="240px"
+                    android:layout_height="wrap_content"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_ul"
+                    android:padding="0px"
+                    android:text="May"
+                    android:textAllCaps="false"
+                    android:textColor="@color/gray"
+                    android:textSize="92px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_month6"
+                    android:layout_width="240px"
+                    android:layout_height="wrap_content"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_ul"
+                    android:padding="0px"
+                    android:text="Jun"
+                    android:textAllCaps="false"
+                    android:textColor="@color/gray"
+                    android:textSize="92px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_month7"
+                    android:layout_width="240px"
+                    android:layout_height="wrap_content"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_ul"
+                    android:padding="0px"
+                    android:text="Jul"
+                    android:textAllCaps="false"
+                    android:textColor="@color/gray"
+                    android:textSize="92px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_month8"
+                    android:layout_width="240px"
+                    android:layout_height="wrap_content"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_ul"
+                    android:padding="0px"
+                    android:text="Aug"
+                    android:textAllCaps="false"
+                    android:textColor="@color/gray"
+                    android:textSize="92px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_month9"
+                    android:layout_width="240px"
+                    android:layout_height="wrap_content"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_ul"
+                    android:padding="0px"
+                    android:text="Sep"
+                    android:textAllCaps="false"
+                    android:textColor="@color/gray"
+                    android:textSize="92px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_month10"
+                    android:layout_width="240px"
+                    android:layout_height="wrap_content"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_ul"
+                    android:padding="0px"
+                    android:text="Oct"
+                    android:textAllCaps="false"
+                    android:textColor="@color/gray"
+                    android:textSize="92px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_month11"
+                    android:layout_width="240px"
+                    android:layout_height="wrap_content"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_ul"
+                    android:padding="0px"
+                    android:text="Nov"
+                    android:textAllCaps="false"
+                    android:textColor="@color/gray"
+                    android:textSize="92px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_month12"
+                    android:layout_width="240px"
+                    android:layout_height="wrap_content"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_ul"
+                    android:padding="0px"
+                    android:text="Dec"
+                    android:textAllCaps="false"
+                    android:textColor="@color/gray"
+                    android:textSize="92px" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+            android:id="@+id/frag1_wrap_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/frag1_wrap_month"
+            android:layout_marginTop="64px"
+            android:paddingRight="64px"
+            android:scrollbars="none">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/frag1_layout_month"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="436px"
+                android:paddingRight="436px">
+
+                <Button
+                    android:id="@+id/frag1_btn_day1"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@drawable/selected_day"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="1"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day2"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="2"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day3"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="3"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day4"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="4"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day5"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="5"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day6"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="6"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day7"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="7"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day8"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="8"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day9"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="9"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day10"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="10"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day11"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="11"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day12"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="12"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day13"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="13"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day14"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="14"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day15"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="15"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day16"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="16"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day17"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="17"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day18"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="18"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day19"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="19"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day20"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="20"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day21"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="21"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day22"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="22"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day23"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="23"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day24"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="24"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day25"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="25"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day26"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="26"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day27"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="27"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day28"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="28"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day29"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="29"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day30"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="30"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+                <Button
+                    android:id="@+id/frag1_btn_day31"
+                    android:layout_width="96px"
+                    android:layout_height="96px"
+                    android:layout_margin="24px"
+                    android:background="@color/invisible"
+                    android:fontFamily="@font/font_r"
+                    android:padding="0px"
+                    android:text="31"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="36px" />
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/frag1_wrap_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/frag1_wrap_date"
+        android:background="@color/color_1">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/frag1_wrap_view_bg" />
+
+        <LinearLayout
+            android:id="@+id/frag1_wrap_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20px"
+            android:layout_marginRight="128px">
+
+            <Button
+                android:id="@+id/frag1_btn_time1"
+                android:layout_width="288px"
+                android:layout_height="wrap_content"
+                android:layout_margin="12px"
+                android:background="@color/invisible"
+                android:fontFamily="@font/font_b"
+                android:padding="0px"
+                android:text="Breakfast"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="48px" />
+
+            <Button
+                android:id="@+id/frag1_btn_time2"
+                android:layout_width="160px"
+                android:layout_height="wrap_content"
+                android:layout_margin="12px"
+                android:background="@color/invisible"
+                android:fontFamily="@font/font_r"
+                android:padding="0px"
+                android:text="Lunch"
+                android:textAllCaps="false"
+                android:textColor="#eeeeee"
+                android:textSize="48px" />
+
+            <Button
+                android:id="@+id/frag1_btn_time3"
+                android:layout_width="192px"
+                android:layout_height="wrap_content"
+                android:layout_margin="12px"
+                android:background="@color/invisible"
+                android:fontFamily="@font/font_r"
+                android:padding="0px"
+                android:text="Dinner"
+                android:textAllCaps="false"
+                android:textColor="#eeeeee"
+                android:textSize="48px" />
+
+            <Button
+                android:id="@+id/frag1_btn_time4"
+                android:layout_width="128px"
+                android:layout_height="wrap_content"
+                android:layout_margin="12px"
+                android:background="@color/invisible"
+                android:fontFamily="@font/font_r"
+                android:padding="0px"
+                android:text="Etc."
+                android:textAllCaps="false"
+                android:textColor="#eeeeee"
+                android:textSize="48px" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/frag1_wrap_attribute1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/frag1_wrap_time"
+            android:paddingLeft="64px"
+            android:paddingRight="64px">
+
+            <TextView
+                android:id="@+id/frag1_text_attribute1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24px"
+                android:fontFamily="@font/font_b"
+                android:text="탄수화물"
+                android:textColor="@color/white"
+                android:textSize="42px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="24px"
+                android:layout_below="@id/frag1_text_attribute1"
+                android:background="@drawable/bar"
+                android:backgroundTint="@color/white" />
+
+            <View
+                android:id="@+id/frag1_attribute1_data"
+                android:layout_width="600px"
+                android:layout_height="24px"
+                android:layout_below="@id/frag1_text_attribute1"
+                android:background="@drawable/bar" />
+
+            <View
+                android:layout_width="32px"
+                android:layout_height="32px"
+                android:layout_below="@id/frag1_attribute1_data"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20px"
+                android:background="@drawable/pointer" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/frag1_wrap_attribute2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/frag1_wrap_attribute1"
+            android:paddingLeft="64px"
+            android:paddingRight="64px">
+
+            <TextView
+                android:id="@+id/frag1_text_attribute2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24px"
+                android:fontFamily="@font/font_b"
+                android:text="단백질"
+                android:textColor="@color/white"
+                android:textSize="42px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="24px"
+                android:layout_below="@id/frag1_text_attribute2"
+                android:background="@drawable/bar"
+                android:backgroundTint="@color/white" />
+
+            <View
+                android:id="@+id/frag1_attribute2_data"
+                android:layout_width="600px"
+                android:layout_height="24px"
+                android:layout_below="@id/frag1_text_attribute2"
+                android:background="@drawable/bar" />
+
+            <View
+                android:layout_width="32px"
+                android:layout_height="32px"
+                android:layout_below="@id/frag1_attribute2_data"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20px"
+                android:background="@drawable/pointer" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/frag1_wrap_attribute3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/frag1_wrap_attribute2"
+            android:paddingLeft="64px"
+            android:paddingRight="64px">
+
+            <TextView
+                android:id="@+id/frag1_text_attribute3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24px"
+                android:fontFamily="@font/font_b"
+                android:text="지방"
+                android:textColor="@color/white"
+                android:textSize="42px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="24px"
+                android:layout_below="@id/frag1_text_attribute3"
+                android:background="@drawable/bar"
+                android:backgroundTint="@color/white" />
+
+            <View
+                android:id="@+id/frag1_attribute3_data"
+                android:layout_width="600px"
+                android:layout_height="24px"
+                android:layout_below="@id/frag1_text_attribute3"
+                android:background="@drawable/bar" />
+
+            <View
+                android:layout_width="32px"
+                android:layout_height="32px"
+                android:layout_below="@id/frag1_attribute3_data"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20px"
+                android:background="@drawable/pointer" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/frag1_wrap_attribute4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/frag1_wrap_attribute3"
+            android:paddingLeft="64px"
+            android:paddingRight="64px">
+
+            <TextView
+                android:id="@+id/frag1_text_attribute4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24px"
+                android:fontFamily="@font/font_b"
+                android:text="칼로리"
+                android:textColor="@color/white"
+                android:textSize="42px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="24px"
+                android:layout_below="@id/frag1_text_attribute4"
+                android:background="@drawable/bar"
+                android:backgroundTint="@color/white" />
+
+            <View
+                android:id="@+id/frag1_attribute4_data"
+                android:layout_width="600px"
+                android:layout_height="24px"
+                android:layout_below="@id/frag1_text_attribute4"
+                android:background="@drawable/bar" />
+
+            <View
+                android:layout_width="32px"
+                android:layout_height="32px"
+                android:layout_below="@id/frag1_attribute4_data"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20px"
+                android:background="@drawable/pointer" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/frag1_wrap_attribute4"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="64px"
+            android:layout_marginRight="64px"
+            android:layout_marginBottom="64px">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/frag1_btn_add_food"
+                android:layout_width="456px"
+                android:layout_height="112px"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/btn1"
+                android:stateListAnimator="@null"
+                android:text="음식 추가"
+                android:textColor="@color/white"
+                android:textSize="48px" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/frag1_btn_detail"
+                android:layout_width="456px"
+                android:layout_height="112px"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/btn2"
+                android:stateListAnimator="@null"
+                android:text="상세 보기"
+                android:textColor="@color/white"
+                android:textSize="48px" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

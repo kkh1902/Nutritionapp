@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/detail_wrap_header"
+        android:layout_width="match_parent"
+        android:layout_height="192px"
+        android:layout_alignParentTop="true">
+
+        <ImageButton
+            android:id="@+id/frag3_btn_back"
+            android:layout_width="64px"
+            android:layout_height="64px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="64px"
+            android:background="@drawable/btn_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/frag3_btn_back"
+            android:fontFamily="@font/font_r"
+            android:text="Profile"
+            android:textColor="@color/black"
+            android:textSize="64px" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@+id/detail_wrap_header"
+        android:layout_width="1048px"
+        android:layout_height="match_parent"
+        android:background="@color/color_1">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="192px"
+            android:background="@drawable/detail_wrap_content_bg"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="128px"
+            android:paddingLeft="64px"
+            android:paddingRight="64px">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

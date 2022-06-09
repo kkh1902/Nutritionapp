@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/frag1_wrap_menu"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentTop="true">
+
+        <ImageButton
+            android:id="@+id/frag1_btn_profile"
+            android:layout_width="64px"
+            android:layout_height="64px"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="64px"
+            android:layout_marginRight="64px"
+            android:background="@color/invisible"
+            android:scaleType="fitCenter"
+            android:src="@drawable/profile" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/frag1_wrap_date"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:layout_below="@+id/frag1_wrap_menu">
+
+        <ImageView
+            android:layout_width="96dp"
+            android:layout_height="256dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/frag1_wrap_date_bg" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/frag1_wrap_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/frag1_wrap_date"
+        android:background="@color/color_1">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/frag1_wrap_view_bg" />
+
+        <LinearLayout
+            android:id="@+id/frag1_wrap_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/invisible"
+                android:fontFamily="@font/font_r"
+                android:padding="0dp"
+                android:text="Breakfast"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="48px" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/invisible"
+                android:fontFamily="@font/font_ul"
+                android:padding="0dp"
+                android:text="Lunch"
+                android:textAllCaps="false"
+                android:textColor="#eeeeee"
+                android:textSize="48px" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/invisible"
+                android:fontFamily="@font/font_ul"
+                android:padding="0dp"
+                android:text="Dinner"
+                android:textAllCaps="false"
+                android:textColor="#eeeeee"
+                android:textSize="48px" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/invisible"
+                android:fontFamily="@font/font_ul"
+                android:padding="0dp"
+                android:text="Etc."
+                android:textAllCaps="false"
+                android:textColor="#eeeeee"
+                android:textSize="48px" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/frag1_wrap_attribute1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/frag1_wrap_time"
+            android:layout_marginBottom="24px"
+            android:paddingLeft="64px"
+            android:paddingRight="64px">
+
+            <TextView
+                android:id="@+id/frag1_text_attribute1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24px"
+                android:fontFamily="@font/font_b"
+                android:text="탄수화물"
+                android:textColor="@color/white"
+                android:textSize="42px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="24px"
+                android:layout_below="@id/frag1_text_attribute1"
+                android:background="@drawable/bar"
+                android:backgroundTint="@color/white" />
+
+            <View
+                android:id="@+id/frag1_attribute1_data"
+                android:layout_width="600px"
+                android:layout_height="24px"
+                android:layout_below="@id/frag1_text_attribute1"
+                android:background="@drawable/bar" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/frag1_wrap_attribute2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/frag1_wrap_attribute1"
+            android:layout_marginBottom="24px"
+            android:paddingLeft="64px"
+            android:paddingRight="64px">
+
+            <TextView
+                android:id="@+id/frag1_text_attribute2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24px"
+                android:fontFamily="@font/font_b"
+                android:text="단백질"
+                android:textColor="@color/white"
+                android:textSize="42px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="24px"
+                android:layout_below="@id/frag1_text_attribute2"
+                android:background="@drawable/bar"
+                android:backgroundTint="@color/white" />
+
+            <View
+                android:id="@+id/frag1_attribute2_data"
+                android:layout_width="600px"
+                android:layout_height="24px"
+                android:layout_below="@id/frag1_text_attribute2"
+                android:background="@drawable/bar" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/frag1_wrap_attribute3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/frag1_wrap_attribute2"
+            android:layout_marginBottom="24px"
+            android:paddingLeft="64px"
+            android:paddingRight="64px">
+
+            <TextView
+                android:id="@+id/frag1_text_attribute3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24px"
+                android:fontFamily="@font/font_b"
+                android:text="지방"
+                android:textColor="@color/white"
+                android:textSize="42px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="24px"
+                android:layout_below="@id/frag1_text_attribute3"
+                android:background="@drawable/bar"
+                android:backgroundTint="@color/white" />
+
+            <View
+                android:id="@+id/frag1_attribute3_data"
+                android:layout_width="600px"
+                android:layout_height="24px"
+                android:layout_below="@id/frag1_text_attribute3"
+                android:background="@drawable/bar" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/frag1_wrap_attribute4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/frag1_wrap_attribute3"
+            android:layout_marginBottom="24px"
+            android:paddingLeft="64px"
+            android:paddingRight="64px">
+
+            <TextView
+                android:id="@+id/frag1_text_attribute4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24px"
+                android:fontFamily="@font/font_b"
+                android:text="칼로리"
+                android:textColor="@color/white"
+                android:textSize="42px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="24px"
+                android:layout_below="@id/frag1_text_attribute4"
+                android:background="@drawable/bar"
+                android:backgroundTint="@color/white" />
+
+            <View
+                android:id="@+id/frag1_attribute4_data"
+                android:layout_width="600px"
+                android:layout_height="24px"
+                android:layout_below="@id/frag1_text_attribute4"
+                android:background="@drawable/bar" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/frag1_wrap_attribute4"
+            android:layout_marginLeft="64px"
+            android:layout_marginRight="64px">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/frag1_btn_add_food"
+                android:layout_width="456px"
+                android:layout_height="112px"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/btn1"
+                android:stateListAnimator="@null" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/frag1_btn_detail"
+                android:layout_width="456px"
+                android:layout_height="112px"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btn2"
+                android:stateListAnimator="@null" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

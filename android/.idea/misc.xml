@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/bar.xml" value="0.301" />
+        <entry key="app/src/main/res/drawable/btn_back.xml" value="0.2525" />
+        <entry key="app/src/main/res/drawable/detail_wrap_content_bg.xml" value="0.4505" />
+        <entry key="app/src/main/res/drawable/frag1_wrap_date_bg.xml" value="0.1225" />
+        <entry key="app/src/main/res/drawable/frag1_wrap_view_bg.xml" value="0.1225" />
+        <entry key="app/src/main/res/drawable/free-icon-font-menu-burger-3917215_24.xml" value="0.37" />
+        <entry key="app/src/main/res/drawable/header_wrap.xml" value="0.37" />
+        <entry key="app/src/main/res/drawable/radius_rect.xml" value="0.103" />
+        <entry key="app/src/main/res/drawable/selected_day.xml" value="0.302" />
+        <entry key="app/src/main/res/font/font.xml" value="0.32760416666666664" />
+        <entry key="app/src/main/res/layout/activity_detail.xml" value="0.48128051757812507" />
+        <entry key="app/src/main/res/layout/activity_detail2.xml" value="0.5889352416992188" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2962962962962963" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/frag1_layout_day.xml" value="0.43854166666666666" />
+        <entry key="app/src/main/res/layout/frag1_layout_month.xml" value="0.43854166666666666" />
+        <entry key="app/src/main/res/layout/fragement1.xml" value="0.29739583333333336" />
+        <entry key="app/src/main/res/layout/fragement2.xml" value="0.29739583333333336" />
+        <entry key="app/src/main/res/layout/fragement3.xml" value="0.29739583333333336" />
+        <entry key="app/src/main/res/layout/fragment1.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment2.xml" value="0.2919158935546875" />
+        <entry key="app/src/main/res/layout/fragment3.xml" value="0.43854166666666666" />
+        <entry key="app/src/main/res/layout/item_list.xml" value="0.2630208333333333" />
+        <entry key="app/src/main/res/layout/menu.xml" value="0.5078125" />
+        <entry key="app/src/main/res/layout/test.xml" value="0.29739583333333336" />
+        <entry key="app/src/main/res/menu/menu.xml" value="0.29739583333333336" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1965" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_food.xml" value="0.14" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
