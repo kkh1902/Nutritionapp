@@ -118,7 +118,7 @@ npm: 6.14.13
 <summary>너무 많은 data가 있는데 요청할 때 시간이 많이 걸리지 않을까?</summary>
 <div markdown="1">       
 
-  </br>첫번째로 Database를 정규화해서 받는다.
+  </br>첫번째로 Database를 OpenApi를 통해서 받아서 정규화 한다(사용)
   </br>
   두번째로 data를 openapi해서 전체를 받아서 정규화를 한다.
   -> 첫번째 방법이 효율적이다. 애초에 받을 때 조건을 걸어서 받는다 
