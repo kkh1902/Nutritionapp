@@ -1,0 +1,32 @@
+[
+  {
+    "DESC_KOR": "백미즉석밥",
+    "SERVING_WT": "100",
+    "NUTR_CONT1": "144.00",
+    "NUTR_CONT2": "33.59",
+    "NUTR_CONT3": "2.11",
+    "NUTR_CONT4": "0.28",
+    "NUTR_CONT5": "1.04",
+    "NUTR_CONT6": "1.00",
+    "NUTR_CONT7": "0.00",
+    "NUTR_CONT8": "0.11",
+    "NUTR_CONT9": "N/A",
+    "BGN_YEAR": "2017",
+    "ANIMAL_PLANT": ""
+  },
+  {
+    "DESC_KOR": "김치찌개",
+    "SERVING_WT": "100",
+    "NUTR_CONT1": "61.00",
+    "NUTR_CONT2": "3.00",
+    "NUTR_CONT3": "3.80",
+    "NUTR_CONT4": "3.80",
+    "NUTR_CONT5": "0.00",
+    "NUTR_CONT6": "491.00",
+    "NUTR_CONT7": "0.00",
+    "NUTR_CONT8": "0.00",
+    "NUTR_CONT9": "N/A",
+    "BGN_YEAR": "2017",
+    "ANIMAL_PLANT": ""
+  }
+]

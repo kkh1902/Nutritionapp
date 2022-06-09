@@ -17,7 +17,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerVertical="true"
             android:layout_margin="64px"
-            android:background="@drawable/btn_back" />
+            android:background="@drawable/shape_btn_back" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -37,7 +37,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="192px"
-            android:background="@drawable/detail_wrap_content_bg"/>
+            android:background="@drawable/bg_detail_wrap_content"/>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

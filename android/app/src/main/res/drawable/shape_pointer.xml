@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rotate android:fromDegrees="180"
+    android:toDegrees="180"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="32px"
+        android:height="32px"
+        android:viewportWidth="32.0"
+        android:viewportHeight="24.0">
+        <path
+            android:fillColor="@color/blue_black"
+            android:pathData="M0 0 h32 l-16 24 Z"/>
+    </vector>
+</rotate>

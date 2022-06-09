@@ -2,906 +2,540 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/shape_bg_gradient"
     android:gravity="center"
     android:orientation="vertical">
 
-    <RelativeLayout
-        android:id="@+id/frag1_wrap_menu"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:layout_alignParentTop="true">
-
-        <ImageButton
-            android:id="@+id/frag1_btn_profile"
-            android:layout_width="64px"
-            android:layout_height="64px"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="64px"
-            android:layout_marginRight="64px"
-            android:background="@color/invisible"
-            android:scaleType="fitCenter"
-            android:src="@drawable/profile" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/frag1_wrap_date"
-        android:layout_width="match_parent"
-        android:layout_height="512px"
-        android:layout_below="@+id/frag1_wrap_menu">
-
-        <ImageView
-            android:layout_width="192px"
-            android:layout_height="512px"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/frag1_wrap_date_bg" />
-
-        <HorizontalScrollView
-            android:id="@+id/frag1_wrap_month"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="64px"
-            android:paddingRight="64px"
-            android:scrollbars="none">
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/frag1_layout_month"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:paddingLeft="388px"
-                android:paddingRight="388px">
-
-                <Button
-                    android:id="@+id/frag1_btn_month1"
-                    android:layout_width="240px"
-                    android:layout_height="wrap_content"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="Jan"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="92px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_month2"
-                    android:layout_width="240px"
-                    android:layout_height="wrap_content"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_ul"
-                    android:padding="0px"
-                    android:text="Feb"
-                    android:textAllCaps="false"
-                    android:textColor="@color/gray"
-                    android:textSize="92px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_month3"
-                    android:layout_width="240px"
-                    android:layout_height="wrap_content"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_ul"
-                    android:padding="0px"
-                    android:text="Mar"
-                    android:textAllCaps="false"
-                    android:textColor="@color/gray"
-                    android:textSize="92px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_month4"
-                    android:layout_width="240px"
-                    android:layout_height="wrap_content"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_ul"
-                    android:padding="0px"
-                    android:text="Apr"
-                    android:textAllCaps="false"
-                    android:textColor="@color/gray"
-                    android:textSize="92px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_month5"
-                    android:layout_width="240px"
-                    android:layout_height="wrap_content"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_ul"
-                    android:padding="0px"
-                    android:text="May"
-                    android:textAllCaps="false"
-                    android:textColor="@color/gray"
-                    android:textSize="92px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_month6"
-                    android:layout_width="240px"
-                    android:layout_height="wrap_content"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_ul"
-                    android:padding="0px"
-                    android:text="Jun"
-                    android:textAllCaps="false"
-                    android:textColor="@color/gray"
-                    android:textSize="92px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_month7"
-                    android:layout_width="240px"
-                    android:layout_height="wrap_content"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_ul"
-                    android:padding="0px"
-                    android:text="Jul"
-                    android:textAllCaps="false"
-                    android:textColor="@color/gray"
-                    android:textSize="92px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_month8"
-                    android:layout_width="240px"
-                    android:layout_height="wrap_content"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_ul"
-                    android:padding="0px"
-                    android:text="Aug"
-                    android:textAllCaps="false"
-                    android:textColor="@color/gray"
-                    android:textSize="92px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_month9"
-                    android:layout_width="240px"
-                    android:layout_height="wrap_content"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_ul"
-                    android:padding="0px"
-                    android:text="Sep"
-                    android:textAllCaps="false"
-                    android:textColor="@color/gray"
-                    android:textSize="92px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_month10"
-                    android:layout_width="240px"
-                    android:layout_height="wrap_content"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_ul"
-                    android:padding="0px"
-                    android:text="Oct"
-                    android:textAllCaps="false"
-                    android:textColor="@color/gray"
-                    android:textSize="92px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_month11"
-                    android:layout_width="240px"
-                    android:layout_height="wrap_content"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_ul"
-                    android:padding="0px"
-                    android:text="Nov"
-                    android:textAllCaps="false"
-                    android:textColor="@color/gray"
-                    android:textSize="92px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_month12"
-                    android:layout_width="240px"
-                    android:layout_height="wrap_content"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_ul"
-                    android:padding="0px"
-                    android:text="Dec"
-                    android:textAllCaps="false"
-                    android:textColor="@color/gray"
-                    android:textSize="92px" />
-            </LinearLayout>
-        </HorizontalScrollView>
-
-        <HorizontalScrollView
-            android:id="@+id/frag1_wrap_day"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/frag1_wrap_month"
-            android:layout_marginTop="64px"
-            android:paddingRight="64px"
-            android:scrollbars="none">
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/frag1_layout_month"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:paddingLeft="436px"
-                android:paddingRight="436px">
-
-                <Button
-                    android:id="@+id/frag1_btn_day1"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@drawable/selected_day"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="1"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day2"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="2"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day3"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="3"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day4"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="4"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day5"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="5"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day6"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="6"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day7"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="7"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day8"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="8"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day9"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="9"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day10"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="10"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day11"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="11"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day12"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="12"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day13"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="13"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day14"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="14"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day15"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="15"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day16"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="16"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day17"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="17"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day18"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="18"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day19"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="19"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day20"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="20"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day21"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="21"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day22"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="22"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day23"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="23"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day24"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="24"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day25"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="25"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day26"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="26"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day27"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="27"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day28"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="28"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day29"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="29"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day30"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="30"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-                <Button
-                    android:id="@+id/frag1_btn_day31"
-                    android:layout_width="96px"
-                    android:layout_height="96px"
-                    android:layout_margin="24px"
-                    android:background="@color/invisible"
-                    android:fontFamily="@font/font_r"
-                    android:padding="0px"
-                    android:text="31"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="36px" />
-
-
-            </LinearLayout>
-        </HorizontalScrollView>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/frag1_wrap_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/frag1_wrap_date"
-        android:background="@color/color_1">
-
-        <ImageView
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:src="@drawable/frag1_wrap_view_bg" />
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
 
         <LinearLayout
-            android:id="@+id/frag1_wrap_time"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="20px"
-            android:layout_marginRight="128px">
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/frag1_btn_time1"
-                android:layout_width="288px"
+            <RelativeLayout
+                android:id="@+id/main_calendar"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="12px"
-                android:background="@color/invisible"
-                android:fontFamily="@font/font_b"
-                android:padding="0px"
-                android:text="Breakfast"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="48px" />
+                android:layout_marginLeft="64px"
+                android:layout_marginTop="64px"
+                android:layout_marginRight="64px"
+                android:layout_marginBottom="48px"
+                android:background="@drawable/bg_chlendar"
+                android:elevation="32px">
 
-            <Button
-                android:id="@+id/frag1_btn_time2"
-                android:layout_width="160px"
-                android:layout_height="wrap_content"
-                android:layout_margin="12px"
-                android:background="@color/invisible"
-                android:fontFamily="@font/font_r"
-                android:padding="0px"
-                android:text="Lunch"
-                android:textAllCaps="false"
-                android:textColor="#eeeeee"
-                android:textSize="48px" />
+                <CalendarView
+                    android:id="@+id/main_calendarview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
 
-            <Button
-                android:id="@+id/frag1_btn_time3"
-                android:layout_width="192px"
+            <LinearLayout
+                android:id="@+id/main_selector_content1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="12px"
-                android:background="@color/invisible"
-                android:fontFamily="@font/font_r"
-                android:padding="0px"
-                android:text="Dinner"
-                android:textAllCaps="false"
-                android:textColor="#eeeeee"
-                android:textSize="48px" />
+                android:layout_marginBottom="36px"
+                android:paddingLeft="64px"
+                android:paddingRight="64px">
 
-            <Button
-                android:id="@+id/frag1_btn_time4"
-                android:layout_width="128px"
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_time_morning"
+                    android:layout_width="148px"
+                    android:layout_height="128px"
+                    android:background="@drawable/shape_btn_time_selector_sel"
+                    android:paddingBottom="24px"
+                    android:text="아침"
+                    android:textColor="@color/blue_light"
+                    android:textSize="48px"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_time_lunch"
+                    android:layout_width="148px"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_btn_time_selector"
+                    android:paddingBottom="24px"
+                    android:text="점심"
+                    android:textColor="@color/blue_light"
+                    android:textSize="48px"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_time_dinner"
+                    android:layout_width="148px"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_btn_time_selector"
+                    android:paddingBottom="24px"
+                    android:text="저녁"
+                    android:textColor="@color/blue_light"
+                    android:textSize="48px"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/main_wrap_content1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="12px"
-                android:background="@color/invisible"
-                android:fontFamily="@font/font_r"
-                android:padding="0px"
-                android:text="Etc."
-                android:textAllCaps="false"
-                android:textColor="#eeeeee"
-                android:textSize="48px" />
+                android:layout_below="@id/main_calendar"
+                android:layout_marginLeft="64px"
+                android:layout_marginRight="64px"
+                android:layout_marginBottom="64px"
+                android:background="@drawable/shape_bg_dock"
+                android:elevation="8px"
+                android:padding="64px">
+
+                <TextView
+                    android:id="@+id/main_title_content1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="{id}님이 섬취하신 영양소입니다."
+                    android:textColor="@color/blue_black" />
+
+                <LinearLayout
+                    android:id="@+id/main_info_content1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="32px"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="16px"
+                        android:layout_height="16px"
+                        android:layout_marginRight="16px"
+                        android:background="@drawable/shape_bar" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="32px"
+                        android:text="사용자"
+                        android:textSize="30px"
+                        android:textStyle="bold"/>
+
+                    <View
+                        android:layout_width="16px"
+                        android:layout_height="16px"
+                        android:layout_marginRight="16px"
+                        android:background="@drawable/shape_bar"
+                        android:backgroundTint="@color/blue_gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="평균"
+                        android:textSize="30px"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/main_wrap_content1_visual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/main_info_content1"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="128px"
+                        android:layout_height="256px">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="192px"
+                            android:layout_above="@+id/main_bar_kcal_title"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true">
+
+                            <View
+                                android:id="@+id/main_bar_kcal"
+                                android:layout_width="24px"
+                                android:layout_height="116px"
+                                android:layout_gravity="bottom"
+                                android:layout_marginRight="12px"
+                                android:background="@drawable/shape_bar" />
+
+                            <View
+                                android:id="@+id/main_bar_kcal_avg"
+                                android:layout_width="16px"
+                                android:layout_height="116px"
+                                android:layout_gravity="bottom"
+                                android:layout_toRightOf="@+id/main_bar_kcal"
+                                android:background="@drawable/shape_bar"
+                                android:backgroundTint="@color/blue_gray" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/main_bar_kcal_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48px"
+                            android:layout_alignParentBottom="true"
+                            android:text="칼로리"
+                            android:textAlignment="center" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="128px"
+                        android:layout_height="256px">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="192px"
+                            android:layout_above="@+id/main_bar_tan_title"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true">
+
+                            <View
+                                android:id="@+id/main_bar_tan"
+                                android:layout_width="24px"
+                                android:layout_height="116px"
+                                android:layout_gravity="bottom"
+                                android:layout_marginRight="12px"
+                                android:background="@drawable/shape_bar" />
+
+                            <View
+                                android:id="@+id/main_bar_tan_avg"
+                                android:layout_width="16px"
+                                android:layout_height="116px"
+                                android:layout_gravity="bottom"
+                                android:background="@drawable/shape_bar"
+                                android:backgroundTint="@color/blue_gray" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/main_bar_tan_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48px"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:paddingTop="4px"
+                            android:text="탄수화물"
+                            android:textAlignment="center"
+                            android:textSize="32px" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="128px"
+                        android:layout_height="256px">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="192px"
+                            android:layout_above="@+id/main_bar_dan_title"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true">
+
+                            <View
+                                android:id="@+id/main_bar_dan"
+                                android:layout_width="24px"
+                                android:layout_height="116px"
+                                android:layout_gravity="bottom"
+                                android:layout_marginRight="12px"
+                                android:background="@drawable/shape_bar" />
+
+                            <View
+                                android:id="@+id/main_bar_dan_avg"
+                                android:layout_width="16px"
+                                android:layout_height="116px"
+                                android:layout_gravity="bottom"
+                                android:background="@drawable/shape_bar"
+                                android:backgroundTint="@color/blue_gray" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/main_bar_dan_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48px"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="단백질"
+                            android:textAlignment="center" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="128px"
+                        android:layout_height="256px">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="192px"
+                            android:layout_above="@+id/main_bar_ji_title"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true">
+
+                            <View
+                                android:id="@+id/main_bar_ji"
+                                android:layout_width="24px"
+                                android:layout_height="116px"
+                                android:layout_gravity="bottom"
+                                android:layout_marginRight="12px"
+                                android:background="@drawable/shape_bar" />
+
+                            <View
+                                android:id="@+id/main_bar_ji_avg"
+                                android:layout_width="16px"
+                                android:layout_height="116px"
+                                android:layout_gravity="bottom"
+                                android:background="@drawable/shape_bar"
+                                android:backgroundTint="@color/blue_gray" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/main_bar_ji_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48px"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="지방"
+                            android:textAlignment="center" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="128px"
+                        android:layout_height="256px">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="192px"
+                            android:layout_above="@+id/main_bar_sugar_title"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true">
+
+                            <View
+                                android:id="@+id/main_bar_sugar"
+                                android:layout_width="24px"
+                                android:layout_height="116px"
+                                android:layout_gravity="bottom"
+                                android:layout_marginRight="12px"
+                                android:background="@drawable/shape_bar" />
+
+                            <View
+                                android:id="@+id/main_bar_sugar_avg"
+                                android:layout_width="16px"
+                                android:layout_height="116px"
+                                android:layout_gravity="bottom"
+                                android:background="@drawable/shape_bar"
+                                android:backgroundTint="@color/blue_gray" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/main_bar_sugar_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48px"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="당"
+                            android:textAlignment="center" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="128px"
+                        android:layout_height="256px">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="192px"
+                            android:layout_above="@+id/main_bar_salt_title"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true">
+
+                            <View
+                                android:id="@+id/main_bar_salt"
+                                android:layout_width="24px"
+                                android:layout_height="116px"
+                                android:layout_gravity="bottom"
+                                android:layout_marginRight="12px"
+                                android:background="@drawable/shape_bar" />
+
+                            <View
+                                android:id="@+id/main_bar_salt_avg"
+                                android:layout_width="16px"
+                                android:layout_height="116px"
+                                android:layout_gravity="bottom"
+                                android:background="@drawable/shape_bar"
+                                android:backgroundTint="@color/blue_gray" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/main_bar_salt_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48px"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="나트륨"
+                            android:textAlignment="center" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/main_wrap_content2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="64px"
+                android:layout_marginRight="64px"
+                android:layout_marginBottom="64px"
+                android:background="@drawable/shape_bg_window_dock"
+                android:padding="64px">
+
+                <TextView
+                    android:id="@+id/main_title_content2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="128px"
+                    android:layout_marginBottom="32px"
+                    android:background="@drawable/shape_talk_left"
+                    android:elevation="8px"
+                    android:padding="24px"
+                    android:text="{영양소명}이 부족한\n{id}님에게 추천드리는 음식입니다."
+                    android:textColor="@color/blue_black" />
+
+                <TextView
+                    android:id="@+id/main_title_content2_recommend1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/main_title_content2"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="32px"
+                    android:background="@drawable/shape_talk_right"
+                    android:elevation="8px"
+                    android:padding="24px"
+                    android:text="{음식 이름}"
+                    android:textColor="@color/blue_light" />
+
+                <TextView
+                    android:id="@+id/main_title_content2_recommend2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/main_title_content2_recommend1"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="32px"
+                    android:background="@drawable/shape_talk_right"
+                    android:elevation="8px"
+                    android:padding="24px"
+                    android:text="{음식 이름}"
+                    android:textColor="@color/blue_light" />
+
+                <TextView
+                    android:id="@+id/main_title_content2_recommend3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/main_title_content2_recommend2"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="32px"
+                    android:background="@drawable/shape_talk_right"
+                    android:elevation="8px"
+                    android:padding="24px"
+                    android:text="{음식 이름}"
+                    android:textColor="@color/blue_light" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/main_wrap_content_full"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="360px"
+                    android:background="#DEEDF0" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="64px"
+                    android:layout_marginTop="64px"
+                    android:layout_marginBottom="64px"
+                    android:elevation="8px"
+                    android:text="타이틀입니다!"
+                    android:textColor="@color/blue_black"
+                    android:textSize="56px"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="444px"
+                    android:layout_height="560px"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="64px"
+                    android:layout_marginTop="240px"
+                    android:layout_marginRight="64px"
+                    android:layout_marginBottom="64px"
+                    android:background="@drawable/shape_bg_dock"
+                    android:elevation="8px">
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="444px"
+                    android:layout_height="560px"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="64px"
+                    android:layout_marginTop="240px"
+                    android:layout_marginRight="64px"
+                    android:background="@drawable/shape_bg_dock"
+                    android:elevation="8px">
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
         </LinearLayout>
+    </ScrollView>
 
-        <RelativeLayout
-            android:id="@+id/frag1_wrap_attribute1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/frag1_wrap_time"
-            android:paddingLeft="64px"
-            android:paddingRight="64px">
+    <RelativeLayout
+        android:layout_width="640px"
+        android:layout_height="200px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="64px"
+        android:background="@drawable/shape_bg_dock"
+        android:elevation="32px">
 
-            <TextView
-                android:id="@+id/frag1_text_attribute1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="24px"
-                android:fontFamily="@font/font_b"
-                android:text="탄수화물"
-                android:textColor="@color/white"
-                android:textSize="42px" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="24px"
-                android:layout_below="@id/frag1_text_attribute1"
-                android:background="@drawable/bar"
-                android:backgroundTint="@color/white" />
-
-            <View
-                android:id="@+id/frag1_attribute1_data"
-                android:layout_width="600px"
-                android:layout_height="24px"
-                android:layout_below="@id/frag1_text_attribute1"
-                android:background="@drawable/bar" />
-
-            <View
-                android:layout_width="32px"
-                android:layout_height="32px"
-                android:layout_below="@id/frag1_attribute1_data"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20px"
-                android:background="@drawable/pointer" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/frag1_wrap_attribute2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/frag1_wrap_attribute1"
-            android:paddingLeft="64px"
-            android:paddingRight="64px">
-
-            <TextView
-                android:id="@+id/frag1_text_attribute2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="24px"
-                android:fontFamily="@font/font_b"
-                android:text="단백질"
-                android:textColor="@color/white"
-                android:textSize="42px" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="24px"
-                android:layout_below="@id/frag1_text_attribute2"
-                android:background="@drawable/bar"
-                android:backgroundTint="@color/white" />
-
-            <View
-                android:id="@+id/frag1_attribute2_data"
-                android:layout_width="600px"
-                android:layout_height="24px"
-                android:layout_below="@id/frag1_text_attribute2"
-                android:background="@drawable/bar" />
-
-            <View
-                android:layout_width="32px"
-                android:layout_height="32px"
-                android:layout_below="@id/frag1_attribute2_data"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20px"
-                android:background="@drawable/pointer" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/frag1_wrap_attribute3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/frag1_wrap_attribute2"
-            android:paddingLeft="64px"
-            android:paddingRight="64px">
-
-            <TextView
-                android:id="@+id/frag1_text_attribute3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="24px"
-                android:fontFamily="@font/font_b"
-                android:text="지방"
-                android:textColor="@color/white"
-                android:textSize="42px" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="24px"
-                android:layout_below="@id/frag1_text_attribute3"
-                android:background="@drawable/bar"
-                android:backgroundTint="@color/white" />
-
-            <View
-                android:id="@+id/frag1_attribute3_data"
-                android:layout_width="600px"
-                android:layout_height="24px"
-                android:layout_below="@id/frag1_text_attribute3"
-                android:background="@drawable/bar" />
-
-            <View
-                android:layout_width="32px"
-                android:layout_height="32px"
-                android:layout_below="@id/frag1_attribute3_data"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20px"
-                android:background="@drawable/pointer" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/frag1_wrap_attribute4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/frag1_wrap_attribute3"
-            android:paddingLeft="64px"
-            android:paddingRight="64px">
-
-            <TextView
-                android:id="@+id/frag1_text_attribute4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="24px"
-                android:fontFamily="@font/font_b"
-                android:text="칼로리"
-                android:textColor="@color/white"
-                android:textSize="42px" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="24px"
-                android:layout_below="@id/frag1_text_attribute4"
-                android:background="@drawable/bar"
-                android:backgroundTint="@color/white" />
-
-            <View
-                android:id="@+id/frag1_attribute4_data"
-                android:layout_width="600px"
-                android:layout_height="24px"
-                android:layout_below="@id/frag1_text_attribute4"
-                android:background="@drawable/bar" />
-
-            <View
-                android:layout_width="32px"
-                android:layout_height="32px"
-                android:layout_below="@id/frag1_attribute4_data"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20px"
-                android:background="@drawable/pointer" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/frag1_wrap_attribute4"
-            android:layout_alignParentBottom="true"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/main_btn_addfood"
+            android:layout_width="92px"
+            android:layout_height="92px"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="64px"
+            android:background="@drawable/img_addfood_activity"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:stateListAnimator="@null" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/main_btn_listfood"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/img_listfood_activity"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:stateListAnimator="@null" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/main_btn_detail"
+            android:layout_width="92px"
+            android:layout_height="92px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
             android:layout_marginRight="64px"
-            android:layout_marginBottom="64px">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/frag1_btn_add_food"
-                android:layout_width="456px"
-                android:layout_height="112px"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"
-                android:background="@drawable/btn1"
-                android:stateListAnimator="@null"
-                android:text="음식 추가"
-                android:textColor="@color/white"
-                android:textSize="48px" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/frag1_btn_detail"
-                android:layout_width="456px"
-                android:layout_height="112px"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:background="@drawable/btn2"
-                android:stateListAnimator="@null"
-                android:text="상세 보기"
-                android:textColor="@color/white"
-                android:textSize="48px" />
-        </RelativeLayout>
+            android:background="@drawable/img_detail_activity"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:stateListAnimator="@null" />
     </RelativeLayout>
 </RelativeLayout>

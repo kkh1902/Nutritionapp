@@ -17,7 +17,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerVertical="true"
             android:layout_margin="64px"
-            android:background="@drawable/btn_back" />
+            android:background="@drawable/shape_btn_back" />
 
         <TextView
             android:id="@+id/detail_title"
@@ -40,7 +40,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="192px"
-            android:background="@drawable/detail_wrap_content_bg" />
+            android:background="@drawable/bg_detail_wrap_content" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -68,7 +68,7 @@
                 <View
                     android:layout_width="24px"
                     android:layout_height="640px"
-                    android:background="@drawable/bar"
+                    android:background="@drawable/shape_bar"
                     android:backgroundTint="@color/color_3" />
 
                 <RelativeLayout
@@ -101,7 +101,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="0dp"
                             android:layout_toRightOf="@id/detail_text_attribute1"
-                            android:background="@drawable/bar"
+                            android:background="@drawable/shape_bar"
                             android:backgroundTint="@color/white" />
 
                         <View
@@ -109,7 +109,7 @@
                             android:layout_width="200px"
                             android:layout_height="24px"
                             android:layout_toRightOf="@id/detail_text_attribute1"
-                            android:background="@drawable/bar" />
+                            android:background="@drawable/shape_bar" />
 
                     </RelativeLayout>
                 </RelativeLayout>

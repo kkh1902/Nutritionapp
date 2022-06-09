@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="720px"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_modal"
+    android:padding="64px">
+
+    <RelativeLayout
+        android:id="@+id/modal_addfood_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48px">
+        <ImageView
+            android:id="@+id/modal_addfood_img"
+            android:layout_width="128px"
+            android:layout_height="128px"
+            android:src="@drawable/img_addfood"
+            android:layout_marginRight="32px"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/modal_addfood_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/modal_addfood_img"
+            android:text="[음식이름]을(를)\n추가하시겠습니까?"
+            android:textColor="@color/blue_black"
+            android:textSize="40px" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/modal_addfood_header"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/modal_addfood_btn_true_breakfast"
+            android:layout_width="match_parent"
+            android:layout_height="96px"
+            android:layout_marginBottom="24px"
+            android:background="@drawable/shape_btn3"
+            android:backgroundTint="@color/blue_light"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="0px"
+            android:text="아침"
+            android:textAlignment="center"
+            android:textColor="@color/blue_black"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/modal_addfood_btn_true_lunch"
+            android:layout_width="match_parent"
+            android:layout_height="96px"
+            android:layout_marginBottom="24px"
+            android:background="@drawable/shape_btn3"
+            android:backgroundTint="@color/blue_light"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="0px"
+            android:text="점심"
+            android:textAlignment="center"
+            android:textColor="@color/blue_black"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/modal_addfood_btn_true_dinner"
+            android:layout_width="match_parent"
+            android:layout_height="96px"
+            android:layout_marginBottom="24px"
+            android:background="@drawable/shape_btn3"
+            android:backgroundTint="@color/blue_light"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="0px"
+            android:text="저녁"
+            android:textAlignment="center"
+            android:textColor="@color/blue_black"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/modal_addfood_btn_false"
+            android:layout_width="match_parent"
+            android:layout_height="96px"
+            android:layout_marginBottom="24px"
+            android:background="@drawable/shape_btn3"
+            android:backgroundTint="@color/blue_gray"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="0px"
+            android:text="아니오"
+            android:textAlignment="center"
+            android:textColor="@color/blue_light"/>
+    </LinearLayout>
+
+</RelativeLayout>

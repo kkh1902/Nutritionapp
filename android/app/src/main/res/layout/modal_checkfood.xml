@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="720px"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_modal"
+    android:padding="64px">
+
+    <RelativeLayout
+        android:id="@+id/modal_addfood_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48px">
+
+        <ImageView
+            android:id="@+id/modal_listfood_img"
+            android:layout_width="96px"
+            android:layout_height="96px"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="32px"
+            android:src="@drawable/img_listfood" />
+
+        <TextView
+            android:id="@+id/modal_addfood_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/modal_listfood_img"
+            android:text="음식이 추가되었습니다.\n확인하시겠습니까?"
+            android:textColor="@color/black"
+            android:textSize="40px" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/modal_addfood_header">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/modal_checkfood_btn_true"
+            android:layout_width="280px"
+            android:layout_height="96px"
+            android:layout_marginRight="32px"
+            android:background="@drawable/shape_btn3"
+            android:backgroundTint="@color/blue"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="0px"
+            android:text="네"
+            android:textColor="@color/blue_light"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/modal_checkfood_btn_false"
+            android:layout_width="280px"
+            android:layout_height="96px"
+            android:layout_marginRight="32px"
+            android:background="@drawable/shape_btn3"
+            android:backgroundTint="@color/blue_light"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="0px"
+            android:text="아니오"
+            android:textColor="@color/blue_black"/>
+    </LinearLayout>
+
+</RelativeLayout>
