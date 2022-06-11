@@ -32,20 +32,20 @@
 # 앱 페이지
 
 ## 로딩 페이지
-![image](https://user-images.githubusercontent.com/91061890/173192506-8be6c84b-57dd-4cf0-9e33-5338efbf8ee6.png)
+<img width="150" src="https://user-images.githubusercontent.com/91061890/173192506-8be6c84b-57dd-4cf0-9e33-5338efbf8ee6.png"></img>
 
 ## 로그인 페이지
 
-  ![image](https://user-images.githubusercontent.com/91061890/173192491-a02d9803-7453-4bce-add6-8d22a1579d58.png)
+<img width="150" src="https://user-images.githubusercontent.com/91061890/173192491-a02d9803-7453-4bce-add6-8d22a1579d58.png"></img>
 
 ## 메인 화면
-![image](https://user-images.githubusercontent.com/91061890/173192522-28d6d842-7474-4843-aab5-068f637c543e.png)
+<img width="150" src="https://user-images.githubusercontent.com/91061890/173192522-28d6d842-7474-4843-aab5-068f637c543e.png"></img>
 
 ## 음식 추가 화면
-![image](https://user-images.githubusercontent.com/91061890/173192530-95f92800-4020-42e7-9556-dffeaaa88b0c.png)
+<img width="150" src="https://user-images.githubusercontent.com/91061890/173192530-95f92800-4020-42e7-9556-dffeaaa88b0c.png"></img>
 
 ## 음식 목록 화면
-![image](http<s://user-images.githubusercontent.com/91061890/173192548-85249d65-96c5-4165-8895-bdacf2758604.png)
+<img width="150" src="http<s://user-images.githubusercontent.com/91061890/173192548-85249d65-96c5-4165-8895-bdacf2758604.png"></img>
 
 
 # 먹보 - Backend
