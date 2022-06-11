@@ -45,7 +45,7 @@
 <img width="150" src="https://user-images.githubusercontent.com/91061890/173192530-95f92800-4020-42e7-9556-dffeaaa88b0c.png"></img>
 
 ## 음식 목록 화면
-<img width="150" src="http<s://user-images.githubusercontent.com/91061890/173192548-85249d65-96c5-4165-8895-bdacf2758604.png"></img>
+<img width="150" src="http://user-images.githubusercontent.com/91061890/173192548-85249d65-96c5-4165-8895-bdacf2758604.png"></img>
 
 
 # 먹보 - Backend
