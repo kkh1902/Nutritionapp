@@ -96,7 +96,7 @@
 
 
 #### 3.사용자 스펙 조회,기록,수정,삭제 연산 가능
-mysql 이미지(user)
+
 
 
 </br>
@@ -144,6 +144,11 @@ npm: 6.14.13
   
   
 </br>
+
+#### 4.CI/CD 구현 (예정)
+![image](https://user-images.githubusercontent.com/91061890/173294436-52f23ecd-ff42-4ef6-9549-43dd668a9d10.png)
+
+백엔드 깃과 travis를 연동해서 travis가 CI 부분을 맡고있고 CD는 S3에 빌드파일을 저장한뒤 codedeploy을 통해서 배포, 배포방식은 도커를 이용하여 blue and green방식으로 무중단 배포 구현
 
 
 ### &#127919; Backend Trouble Shooting
