@@ -23,29 +23,26 @@ class user {
     async spec(req, res) {
         try {
             const { user_id } = req.params;
-            const { gender, weight, height, age } = req.body;
+            const { gender, weight, height, user_name, age } = req.body;
 
             const user_spec = await pool.query(
-                "insert into user(user_id, gender, weight, height, age) values (?, ?, ?, ?, ?) ",
-                [user_id, gender, weight, height, age]
+                "insert into user(user_id, gender, weight, height, age, user_name) values (?, ?, ?, ?, ? ,?) ",
+                [user_id, gender, weight, height, age, user_name]
             );
 
             if (gender == "man") {
                 const bmr = 66.47 + (13.75 * weight + 5 * height - 6.76 * age);
-                let bmr2 = Number(Math.round(bmr))
+                var bmr2 = Number(Math.round(bmr));
             } else if (gender == "woman") {
-                const bmr = 655.1 + (9.56 * weight + 1.85 * height - 4.68 * age);
-                let bmr2 = Number(Math.round(bmr))
+                const bmr =
+                    655.1 + (9.56 * weight + 1.85 * height - 4.68 * age);
+                var bmr2 = Number(Math.round(bmr));
             }
 
-            const tan2 = Number(Math.round(bmr2 / 5))
-            const dan2 = Number(Math.round(bmr2 / 2))
-            const fat2 = Number(Math.round(bmr2 / 3))
-
-
             const bmr = await pool.query(
-                "update user set bmr =? ,tan2=? ,dan2=? fat2=? where user_id=?",
-                [bmr2, tan2, dan2, fat2, user_id]
+                "update user set bmr =?  where user_id=?",
+
+                [bmr2, user_id]
             );
 
             const user_information = await pool.query(
