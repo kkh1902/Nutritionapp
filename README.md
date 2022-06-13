@@ -166,7 +166,7 @@ npm: 6.14.13
 </div>
 </details>
 
-details>
+<details>
 <summary>사용자가 먹은 음식 기록을 어떻게 구분할 것인가?</summary>
 <div markdown="1">       
 
