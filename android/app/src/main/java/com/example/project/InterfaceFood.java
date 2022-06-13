@@ -21,7 +21,7 @@ public interface InterfaceFood {
 
     @FormUrlEncoded
     @POST("{food_name}")
-    Call<ModelFood> postFoodData(@FieldMap HashMap<String, Object> param, @Path("food_name") String id);
+    Call<ArrayList<ModelFood>> postFoodData(@FieldMap HashMap<String, Object> param, @Path("food_name") String cat);
 
     @FormUrlEncoded
     @PATCH("{food_name}")

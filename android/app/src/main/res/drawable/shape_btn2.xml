@@ -4,8 +4,11 @@
         android:radius="512px"
         />
     <solid
-        android:color="@color/color_2"
+        android:color="@color/white"
         />
+    <stroke
+        android:width="4px"
+        android:color="@color/blue_light"/>
     <padding
         android:left="0dp"
         android:top="0dp"

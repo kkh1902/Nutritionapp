@@ -16,7 +16,6 @@
         <activity android:name=".AddFoodActivity"/>
         <activity android:name=".ListFoodActivity"
             tools:ignore="Instantiatable" />
-        <activity android:name=".DetailActivity"/>
         <activity android:name=".ModalActivity"
             android:theme="@style/Theme.AppCompat.Dialog" />
         <activity

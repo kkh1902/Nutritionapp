@@ -25,7 +25,7 @@ import retrofit2.Response;
 public class ListFoodActivity extends AppCompatActivity {
 
     private static final String TAG = "ListFoodActivity";
-    private String USER_ID;
+    private String USER_ID, sel_date, sel_mealtime;
     private ArrayList<ModelRecord> arrayList;
     private Intent intent;
     private AdapterListRecord arrayAdapter;
@@ -46,15 +46,28 @@ public class ListFoodActivity extends AppCompatActivity {
         foodlist = (ListView) findViewById(R.id.listood_list_getlist);
         wrap_empty = (RelativeLayout) findViewById(R.id.listfood_wrap_empty);
 
-        SharedPreferences preferences = getSharedPreferences("user_id", Context.MODE_PRIVATE);
+        SharedPreferences preferences = getSharedPreferences("user_data", Context.MODE_PRIVATE);
         USER_ID = preferences.getString("user_id","");
+
+        intent = getIntent();
+        sel_date = intent.getExtras().getString("sel_date");
+        sel_mealtime = intent.getExtras().getString("sel_mealtime");
+        Log.e(TAG, "mealtime"+sel_mealtime);
+
+        if (sel_mealtime.equals("아침")) {
+            selBtnGroup(btn_breakfast,btn_lunch,btn_dinner,0);
+        } else if (sel_mealtime.equals("점심")) {
+            selBtnGroup(btn_breakfast,btn_lunch,btn_dinner,1);
+        } else if (sel_mealtime.equals("저녁")) {
+            selBtnGroup(btn_breakfast,btn_lunch,btn_dinner,2);
+        }
 
         arrayList = new ArrayList<ModelRecord>();
         arrayAdapter = new AdapterListRecord(this, arrayList);
-        interfaces = ClientRecord.getRetrofitInstance().create(InterfaceRecord.class);
+        interfaces = Client.getRetrofitInstance().create(InterfaceRecord.class);
         foodlist.setAdapter(arrayAdapter);
 
-        getFoodList("breakfast");
+        getFoodList(sel_mealtime);
 
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,21 +82,21 @@ public class ListFoodActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 selBtnGroup(btn_breakfast,btn_lunch,btn_dinner,0);
-                getFoodList("breakfast");
+                getFoodList("아침");
             }
         });
         btn_lunch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 selBtnGroup(btn_breakfast,btn_lunch,btn_dinner,1);
-                getFoodList("lunch");
+                getFoodList("점심");
             }
         });
         btn_dinner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 selBtnGroup(btn_breakfast,btn_lunch,btn_dinner,2);
-                getFoodList("dinner");
+                getFoodList("저녁");
             }
         });
 
@@ -124,10 +137,13 @@ public class ListFoodActivity extends AppCompatActivity {
             public void onResponse(Call<ArrayList<ModelRecord>> lcal, Response<ArrayList<ModelRecord>> response) {
                 ArrayList<ModelRecord> foods = response.body();
                 for (int i=0; i < foods.toArray().length; i++) {
+                    String temp_date = foods.get(i).getDate().substring(0,10);
                     String temp_meal_time = foods.get(i).getMeal_time();
-                    if (temp_meal_time.equals(mealTime)) {
-                        arrayList.add(foods.get(i));
-                        wrap_empty.setVisibility(View.GONE);
+                    if (temp_date.equals(sel_date)) {
+                        if (temp_meal_time.equals(mealTime)) {
+                            arrayList.add(foods.get(i));
+                            wrap_empty.setVisibility(View.GONE);
+                        }
                     }
                     else {
                         wrap_empty.setVisibility(View.VISIBLE);

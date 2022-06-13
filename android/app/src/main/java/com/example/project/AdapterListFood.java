@@ -45,7 +45,7 @@ public class AdapterListFood extends BaseAdapter{
         TextView foodattrib = (TextView) view.findViewById(R.id.addfood_text_foodattrib);
 
         foodname.setText(foodData.get(position).getFood_name());
-        foodattrib.setText(foodData.get(position).getFood_once());
+        foodattrib.setText("1회섭취량 : " + foodData.get(position).getFood_once() + " /kcal : " + foodData.get(position).getKcal());
 
         return view;
     }

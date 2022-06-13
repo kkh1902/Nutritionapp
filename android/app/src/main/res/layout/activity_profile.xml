@@ -1,55 +1,283 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_bg_gradient">
 
     <RelativeLayout
-        android:id="@+id/detail_wrap_header"
+        android:id="@+id/profile_wrap_header"
         android:layout_width="match_parent"
         android:layout_height="192px"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentTop="true"
+        android:paddingLeft="64px"
+        android:paddingRight="64px">
 
         <ImageButton
-            android:id="@+id/frag3_btn_back"
+            android:id="@+id/profile_btn_back"
             android:layout_width="64px"
             android:layout_height="64px"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_centerVertical="true"
-            android:layout_margin="64px"
-            android:background="@drawable/shape_btn_back" />
+            android:layout_marginTop="64px"
+            android:layout_marginRight="64px"
+            android:layout_marginBottom="64px"
+            android:background="@drawable/shape_btn_back"
+            android:backgroundTint="@color/blue_light" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/frag3_btn_back"
+            android:layout_toRightOf="@+id/profile_btn_back"
             android:fontFamily="@font/font_r"
-            android:text="Profile"
-            android:textColor="@color/black"
+            android:text="User Profile"
+            android:textColor="@color/blue_light"
             android:textSize="64px" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/profile_btn_signout"
+            android:layout_width="wrap_content"
+            android:layout_height="96px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_bg_dock"
+            android:drawableEnd="@drawable/img_sign_out"
+            android:elevation="8px"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:paddingLeft="32px"
+            android:paddingRight="32px"
+            android:text="SignOut "
+            android:textColor="@color/blue_black"
+            android:textSize="32px" />
     </RelativeLayout>
+
     <RelativeLayout
-        android:layout_below="@+id/detail_wrap_header"
-        android:layout_width="1048px"
-        android:layout_height="match_parent"
-        android:background="@color/color_1">
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="192px"
-            android:background="@drawable/bg_detail_wrap_content"/>
-        <RelativeLayout
+        android:id="@+id/profile_wrap_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_wrap_header"
+        android:layout_marginLeft="64px"
+        android:layout_marginRight="64px"
+        android:layout_marginBottom="64px"
+        android:background="@drawable/shape_bg_dock"
+        android:elevation="8px"
+        android:padding="64px">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="128px"
-            android:paddingLeft="64px"
-            android:paddingRight="64px">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="123"/>
+            android:orientation="vertical">
 
-        </RelativeLayout>
+            <TextView
+                android:id="@+id/profile_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="{user_name}님"
+                android:textColor="@color/blue_black"
+                android:textSize="96px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/profile_user_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64px"
+                android:text="ID : {user_id}"
+                android:textColor="@color/blue_gray"
+                android:textSize="36px" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64px"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="96px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16px"
+                        android:text="나이"
+                        android:textColor="@color/blue_black"
+                        android:textSize="36px"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/profile_user_age"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Age"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/blue"
+                        android:textSize="44px"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/profile_edit_user_age"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/invisible"
+                        android:hint="나이를 입력하세요."
+                        android:inputType="number"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/blue_black"
+                        android:textSize="44px"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_marginTop="16px"
+                    android:layout_marginBottom="16px"
+                    android:background="@color/blue_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="96px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16px"
+                        android:text="성별"
+                        android:textColor="@color/blue_black"
+                        android:textSize="36px"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/profile_user_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Gender"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/blue"
+                        android:textSize="44px"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/profile_edit_user_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/invisible"
+                        android:hint="성별을 입력하세요.(man, woman)"
+                        android:inputType="text"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/blue_black"
+                        android:textSize="44px"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_marginTop="16px"
+                    android:layout_marginBottom="16px"
+                    android:background="@color/blue_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="96px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16px"
+                        android:text="키"
+                        android:textColor="@color/blue_black"
+                        android:textSize="36px"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/profile_user_height"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Height"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/blue"
+                        android:textSize="44px"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/profile_edit_user_height"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/invisible"
+                        android:hint="키를 입력하세요."
+                        android:inputType="number"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/blue_black"
+                        android:textSize="44px"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_marginTop="16px"
+                    android:layout_marginBottom="16px"
+                    android:background="@color/blue_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="96px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16px"
+                        android:text="나이"
+                        android:textColor="@color/blue_black"
+                        android:textSize="36px"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/profile_user_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Weight"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/blue"
+                        android:textSize="44px"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/profile_edit_user_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/invisible"
+                        android:hint="몸무게를 입력하세요."
+                        android:inputType="number"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/blue_black"
+                        android:textSize="44px"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/profile_btn_update_user_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_btn3"
+                android:elevation="16px"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="정보 수정"
+                android:textColor="@color/blue_light"
+                android:textSize="44px" />
+        </LinearLayout>
     </RelativeLayout>
 </RelativeLayout>

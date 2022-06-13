@@ -7,6 +7,7 @@
     android:orientation="vertical">
 
     <ScrollView
+        android:id="@+id/main_scrollview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollbars="none">
@@ -43,38 +44,76 @@
                 android:paddingLeft="64px"
                 android:paddingRight="64px">
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_time_morning"
-                    android:layout_width="148px"
-                    android:layout_height="128px"
-                    android:background="@drawable/shape_btn_time_selector_sel"
-                    android:paddingBottom="24px"
-                    android:text="아침"
-                    android:textColor="@color/blue_light"
-                    android:textSize="48px"
-                    android:textStyle="bold" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_time_lunch"
-                    android:layout_width="148px"
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/shape_btn_time_selector"
-                    android:paddingBottom="24px"
-                    android:text="점심"
-                    android:textColor="@color/blue_light"
-                    android:textSize="48px"
-                    android:textStyle="bold" />
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_time_dinner"
-                    android:layout_width="148px"
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_time_breakfast"
+                        android:layout_width="148px"
+                        android:layout_height="88px"
+                        android:background="@color/invisible"
+                        android:text="아침"
+                        android:textColor="@color/blue_light"
+                        android:textSize="48px"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/btn_time_breakfast_sel"
+                        android:layout_width="20px"
+                        android:layout_height="20px"
+                        android:background="@drawable/shape_bg_dock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/shape_btn_time_selector"
-                    android:paddingBottom="24px"
-                    android:text="저녁"
-                    android:textColor="@color/blue_light"
-                    android:textSize="48px"
-                    android:textStyle="bold" />
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_time_lunch"
+                        android:layout_width="148px"
+                        android:layout_height="88px"
+                        android:background="@color/invisible"
+                        android:text="점심"
+                        android:textColor="@color/blue_light"
+                        android:textSize="48px"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/btn_time_lunch_sel"
+                        android:layout_width="20px"
+                        android:layout_height="20px"
+                        android:background="@drawable/shape_bg_dock"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_time_dinner"
+                        android:layout_width="148px"
+                        android:layout_height="88px"
+                        android:background="@color/invisible"
+                        android:text="저녁"
+                        android:textColor="@color/blue_light"
+                        android:textSize="48px"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/btn_time_dinner_sel"
+                        android:layout_width="20px"
+                        android:layout_height="20px"
+                        android:background="@drawable/shape_bg_dock"
+                        android:visibility="invisible" />
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -85,7 +124,7 @@
                 android:layout_below="@id/main_calendar"
                 android:layout_marginLeft="64px"
                 android:layout_marginRight="64px"
-                android:layout_marginBottom="64px"
+                android:layout_marginBottom="32px"
                 android:background="@drawable/shape_bg_dock"
                 android:elevation="8px"
                 android:padding="64px">
@@ -95,7 +134,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="{id}님이 섬취하신 영양소입니다."
-                    android:textColor="@color/blue_black" />
+                    android:textColor="@color/blue_black"
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:id="@+id/main_info_content1"
@@ -119,7 +159,7 @@
                         android:layout_marginRight="32px"
                         android:text="사용자"
                         android:textSize="30px"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <View
                         android:layout_width="16px"
@@ -133,7 +173,7 @@
                         android:layout_height="wrap_content"
                         android:text="평균"
                         android:textSize="30px"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -380,121 +420,417 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/main_wrap_content2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="64px"
-                android:layout_marginRight="64px"
-                android:layout_marginBottom="64px"
-                android:background="@drawable/shape_bg_window_dock"
-                android:padding="64px">
+                android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/main_title_content2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginTop="128px"
-                    android:layout_marginBottom="32px"
-                    android:background="@drawable/shape_talk_left"
-                    android:elevation="8px"
-                    android:padding="24px"
-                    android:text="{영양소명}이 부족한\n{id}님에게 추천드리는 음식입니다."
-                    android:textColor="@color/blue_black" />
-
-                <TextView
-                    android:id="@+id/main_title_content2_recommend1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/main_title_content2"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginBottom="32px"
-                    android:background="@drawable/shape_talk_right"
-                    android:elevation="8px"
-                    android:padding="24px"
-                    android:text="{음식 이름}"
-                    android:textColor="@color/blue_light" />
-
-                <TextView
-                    android:id="@+id/main_title_content2_recommend2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/main_title_content2_recommend1"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginBottom="32px"
-                    android:background="@drawable/shape_talk_right"
-                    android:elevation="8px"
-                    android:padding="24px"
-                    android:text="{음식 이름}"
-                    android:textColor="@color/blue_light" />
-
-                <TextView
-                    android:id="@+id/main_title_content2_recommend3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/main_title_content2_recommend2"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginBottom="32px"
-                    android:background="@drawable/shape_talk_right"
-                    android:elevation="8px"
-                    android:padding="24px"
-                    android:text="{음식 이름}"
-                    android:textColor="@color/blue_light" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/main_wrap_content_full"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="360px"
-                    android:background="#DEEDF0" />
-
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="64px"
-                    android:layout_marginTop="64px"
-                    android:layout_marginBottom="64px"
-                    android:elevation="8px"
-                    android:text="타이틀입니다!"
-                    android:textColor="@color/blue_black"
-                    android:textSize="56px"
-                    android:textStyle="bold" />
+                    android:orientation="vertical"
+                    android:layout_marginBottom="256px">
 
-                <RelativeLayout
-                    android:layout_width="444px"
-                    android:layout_height="560px"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="64px"
-                    android:layout_marginTop="240px"
-                    android:layout_marginRight="64px"
-                    android:layout_marginBottom="64px"
-                    android:background="@drawable/shape_bg_dock"
-                    android:elevation="8px">
+                    <RelativeLayout
+                        android:id="@+id/detail_wrap_recommend"
+                        android:layout_width="952px"
+                        android:layout_height="460px"
+                        android:layout_marginLeft="64px"
+                        android:layout_marginRight="64px"
+                        android:background="@drawable/img_bg_recommend"
+                        android:elevation="8px"
+                        android:padding="32px">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:elevation="16px"
+                            android:text="먹보's PICK"
+                            android:textColor="@color/blue_black"
+                            android:textSize="80px"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="116px"
+                            android:elevation="16px"
+                            android:text="이러한 음식을 섭취해보세요!"
+                            android:textColor="@color/blue_gray"
+                            android:textSize="44px"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/detail_btn_recommend_detail"
+                            android:layout_width="156px"
+                            android:layout_height="64px"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentBottom="true"
+                            android:background="@drawable/shape_btn2"
+                            android:padding="0px"
+                            android:text="더보기"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/detail_wrap_recommend_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32px"
+                        android:background="@color/white"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="256px"
+                            android:background="#FFF0F0" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="8px"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/shape_bg_shadow_top" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="8px"
+                            android:layout_alignParentBottom="true"
+                            android:background="@drawable/shape_bg_shadow_bottom" />
+
+                        <TextView
+                            android:id="@+id/main_recommend_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="64px"
+                            android:layout_marginTop="64px"
+                            android:layout_marginBottom="64px"
+                            android:elevation="8px"
+                            android:text="단백질, 지방이 많은 음식입니다."
+                            android:textColor="@color/blue_black"
+                            android:textSize="56px"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:orientation="horizontal"
+                            android:paddingTop="200px">
+
+                            <RelativeLayout
+                                android:layout_width="296px"
+                                android:layout_height="296px"
+                                android:layout_marginLeft="64px"
+                                android:layout_marginRight="32px"
+                                android:layout_marginBottom="64px"
+                                android:background="@drawable/img_recommend_food1"
+                                android:elevation="16px">
+
+                                <TextView
+                                    android:id="@+id/detail_recommend_food1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@drawable/shape_btn2"
+                                    android:padding="16px"
+                                    android:text="추천음식"
+                                    android:textColor="@color/blue_black"
+                                    android:textSize="36px"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="296px"
+                                android:layout_height="296px"
+                                android:layout_marginBottom="64px"
+                                android:background="@drawable/img_recommend_food2"
+                                android:elevation="16px">
+
+                                <TextView
+                                    android:id="@+id/detail_recommend_food2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@drawable/shape_btn2"
+                                    android:padding="16px"
+                                    android:text="추천음식"
+                                    android:textColor="@color/blue_black"
+                                    android:textSize="36px"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="296px"
+                                android:layout_height="296px"
+                                android:layout_marginLeft="32px"
+                                android:layout_marginRight="64px"
+                                android:layout_marginBottom="64px"
+                                android:background="@drawable/img_recommend_food3"
+                                android:elevation="16px">
+
+                                <TextView
+                                    android:id="@+id/detail_recommend_food3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@drawable/shape_btn2"
+                                    android:padding="16px"
+                                    android:text="추천음식"
+                                    android:textColor="@color/blue_black"
+                                    android:textSize="36px"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
 
 
-                </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="64px"
+                        android:layout_marginTop="32px"
+                        android:layout_marginRight="64px"
+                        android:orientation="horizontal">
 
-                <RelativeLayout
-                    android:layout_width="444px"
-                    android:layout_height="560px"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginLeft="64px"
-                    android:layout_marginTop="240px"
-                    android:layout_marginRight="64px"
-                    android:background="@drawable/shape_bg_dock"
-                    android:elevation="8px">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="32px"
+                            android:orientation="vertical">
 
+                            <RelativeLayout
+                                android:id="@+id/detail_wrap_kcal"
+                                android:layout_width="460px"
+                                android:layout_height="460px"
+                                android:layout_marginBottom="32px"
+                                android:background="@drawable/shape_bg_dock"
+                                android:backgroundTint="#FFFFF0"
+                                android:elevation="8px"
+                                android:padding="32px">
 
-                </RelativeLayout>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:elevation="16px"
+                                    android:text="섭취한 칼로리"
+                                    android:textSize="56px"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/detail_user_kcal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="72px"
+                                    android:elevation="16px"
+                                    android:text="00.0 Kcal"
+                                    android:textColor="@color/blue_black"
+                                    android:textSize="64px"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:layout_width="200px"
+                                    android:layout_height="200px"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginRight="16px"
+                                    android:src="@drawable/img_kcal" />
+
+                                <ImageView
+                                    android:id="@+id/detail_user_kcal_status"
+                                    android:layout_width="64px"
+                                    android:layout_height="64px"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginRight="32px"
+                                    android:layout_marginBottom="16px" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/detail_wrap_tan"
+                                android:layout_width="460px"
+                                android:layout_height="460px"
+                                android:layout_marginBottom="32px"
+                                android:background="@drawable/shape_bg_dock"
+                                android:backgroundTint="#F0FFF0"
+                                android:elevation="8px"
+                                android:padding="32px">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:elevation="16px"
+                                    android:text="섭취한 탄수화물"
+                                    android:textSize="56px"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/detail_user_tan"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="72px"
+                                    android:elevation="16px"
+                                    android:text="00.0 g"
+                                    android:textColor="@color/blue_black"
+                                    android:textSize="64px"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:layout_width="200px"
+                                    android:layout_height="200px"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginRight="16px"
+                                    android:src="@drawable/img_tan" />
+
+                                <ImageView
+                                    android:id="@+id/detail_user_tan_status"
+                                    android:layout_width="64px"
+                                    android:layout_height="64px"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginRight="32px"
+                                    android:layout_marginBottom="16px"/>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/detail_wrap_content6"
+                            android:layout_width="460px"
+                            android:layout_height="952px"
+                            android:layout_marginBottom="32px"
+                            android:background="@drawable/img_news"
+                            android:elevation="8px"
+                            android:padding="32px">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:elevation="16px"
+                                android:text="[기사]"
+                                android:textSize="44px"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="64px"
+                                android:elevation="16px"
+                                android:text="GS25, MZ세대 '핫플' 슈퍼말차와 협업 상품 선봬"
+                                android:textColor="@color/blue_black"
+                                android:textSize="56px"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="64px"
+                        android:layout_marginRight="64px"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/detail_wrap_dan"
+                            android:layout_width="460px"
+                            android:layout_height="460px"
+                            android:layout_marginRight="32px"
+                            android:layout_marginBottom="32px"
+                            android:background="@drawable/shape_bg_dock"
+                            android:backgroundTint="#F0F0FF"
+                            android:elevation="8px"
+                            android:padding="32px">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:elevation="16px"
+                                android:text="섭취한 단백질"
+                                android:textSize="56px"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/detail_user_dan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="72px"
+                                android:elevation="16px"
+                                android:text="00.0 g"
+                                android:textColor="@color/blue_black"
+                                android:textSize="64px"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:layout_width="200px"
+                                android:layout_height="200px"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginRight="16px"
+                                android:src="@drawable/img_dan" />
+
+                            <ImageView
+                                android:id="@+id/detail_user_dan_status"
+                                android:layout_width="64px"
+                                android:layout_height="64px"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginRight="32px"
+                                android:layout_marginBottom="16px" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/detail_wrap_ji"
+                            android:layout_width="460px"
+                            android:layout_height="460px"
+                            android:layout_marginBottom="32px"
+                            android:background="@drawable/shape_bg_dock"
+                            android:backgroundTint="#FFF0FD"
+                            android:elevation="8px"
+                            android:padding="32px">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:elevation="16px"
+                                android:text="섭취한 지방"
+                                android:textSize="56px"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/detail_user_ji"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="72px"
+                                android:elevation="16px"
+                                android:text="00.0 g"
+                                android:textColor="@color/blue_black"
+                                android:textSize="64px"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:layout_width="200px"
+                                android:layout_height="200px"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginRight="16px"
+                                android:src="@drawable/img_ji" />
+
+                            <ImageView
+                                android:id="@+id/detail_user_ji_status"
+                                android:layout_width="64px"
+                                android:layout_height="64px"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginRight="32px"
+                                android:layout_marginBottom="16px" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
             </RelativeLayout>
-
         </LinearLayout>
     </ScrollView>
 
@@ -503,7 +839,7 @@
         android:layout_height="200px"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="64px"
+        android:layout_marginBottom="32px"
         android:background="@drawable/shape_bg_dock"
         android:elevation="32px">
 
@@ -528,13 +864,13 @@
             android:stateListAnimator="@null" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/main_btn_detail"
+            android:id="@+id/main_btn_profile"
             android:layout_width="92px"
             android:layout_height="92px"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="64px"
-            android:background="@drawable/img_detail_activity"
+            android:background="@drawable/img_profile_activity"
             android:foreground="?android:attr/selectableItemBackgroundBorderless"
             android:stateListAnimator="@null" />
     </RelativeLayout>

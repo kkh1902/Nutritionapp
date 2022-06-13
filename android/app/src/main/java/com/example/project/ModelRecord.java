@@ -13,7 +13,7 @@ public class ModelRecord {
     private String food;
     private String meal_time;
     private String tan;
-    private String protein;
+    private String dan;
     private String fat;
     private String sugar;
     private String salt;
@@ -26,7 +26,7 @@ public class ModelRecord {
         this.food = food;
         this.meal_time = meal_time;
         this.tan = tan;
-        this.protein = protein;
+        this.dan = protein;
         this.fat = fat;
         this.sugar = sugar;
         this.salt = salt;
@@ -81,12 +81,12 @@ public class ModelRecord {
         this.tan = tan;
     }
 
-    public String getProtein() {
-        return protein;
+    public String getDan() {
+        return dan;
     }
 
-    public void setProtein(String protein) {
-        this.protein = protein;
+    public void setDan(String dan) {
+        this.dan = dan;
     }
 
     public String getFat() {

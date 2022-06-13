@@ -15,17 +15,17 @@ import retrofit2.http.Path;
 
 public interface InterfaceRecord {
 
-    @GET("{user_id}")
+    @GET("record/{user_id}")
     Call<ArrayList<ModelRecord>> getRecordData(@Path("user_id") String id);
 
     @FormUrlEncoded
-    @POST("{user_id}")
+    @POST("record/{user_id}")
     Call<ModelRecord> postRecordData(@FieldMap HashMap<String, Object> param, @Path("user_id") String id);
 
     @FormUrlEncoded
-    @PATCH("{user_id}")
+    @PATCH("record/{user_id}")
     Call<ModelRecord> patchRecordData(@FieldMap HashMap<String, Object> param , @Path("user_id") String id);
 
-    @DELETE("{user_id}")
+    @DELETE("record/{user_id}")
     Call<Void> deleteRecordData(@Path("user_id") String id);
 }

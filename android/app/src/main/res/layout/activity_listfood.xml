@@ -109,6 +109,8 @@
             android:layout_height="match_parent"
             android:divider="#00000000"
             android:dividerHeight="32px"
+            android:paddingTop="48px"
+            android:paddingBottom="64px"
             android:scrollbars="none" />
     </RelativeLayout>
 

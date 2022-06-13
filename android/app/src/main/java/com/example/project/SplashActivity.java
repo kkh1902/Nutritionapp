@@ -42,7 +42,7 @@ import java.util.Date;
 public class SplashActivity extends AppCompatActivity {
 
     private static final String TAG = "LoginActivity";
-    private String USER_ID;
+    private String USER_ID, USER_NAME;
     private TextView title;
 
 
@@ -51,9 +51,10 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        SharedPreferences preferences = getSharedPreferences("user_id", Context.MODE_PRIVATE);
+        SharedPreferences preferences = getSharedPreferences("user_data", Context.MODE_PRIVATE);
         USER_ID = preferences.getString("user_id","");
-        Log.e(TAG, "userid /" + USER_ID + "/");
+        USER_NAME = preferences.getString("user_name","");
+        Log.e(TAG, "userId = " + USER_ID + "/" + "userName = " + USER_NAME);
         if (USER_ID.equals("")) {
             moveMain(1,true);
         } else {
