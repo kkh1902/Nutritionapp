@@ -166,6 +166,15 @@ npm: 6.14.13
 </div>
 </details>
 
+details>
+<summary>사용자가 먹은 음식 기록을 어떻게 구분할 것인가?</summary>
+<div markdown="1">       
+
+  </br>사용자가 음식을 먹은 날짜와 , 언제 먹었는지를 지정을해서 db 스키마를 만들자 
+  
+</div>
+</details>
+
 <details>
 <summary>너무 많은 data가 있는데 요청할 때 시간이 많이 걸리지 않을까?</summary>
 <div markdown="1">       
