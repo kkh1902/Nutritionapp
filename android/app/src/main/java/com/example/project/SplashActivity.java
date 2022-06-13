@@ -54,7 +54,8 @@ public class SplashActivity extends AppCompatActivity {
         SharedPreferences preferences = getSharedPreferences("user_data", Context.MODE_PRIVATE);
         USER_ID = preferences.getString("user_id","");
         USER_NAME = preferences.getString("user_name","");
-        Log.e(TAG, "userId = " + USER_ID + "/" + "userName = " + USER_NAME);
+        Log.e(TAG, "[스플래시 화면] 로그인 여부 판단");
+        Log.e(TAG, "userId = " + USER_ID + " / " + "userName = " + USER_NAME);
         if (USER_ID.equals("")) {
             moveMain(1,true);
         } else {

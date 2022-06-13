@@ -143,6 +143,8 @@ public class ListFoodActivity extends AppCompatActivity {
                         if (temp_meal_time.equals(mealTime)) {
                             arrayList.add(foods.get(i));
                             wrap_empty.setVisibility(View.GONE);
+                            Log.e(TAG, "[음식 목록 화면] 사진 visible");
+                            Log.e(TAG, "sel_mealtime = " + sel_mealtime + " / " + "temp_meal_time = " + temp_meal_time + " / mealtime" + mealTime);
                         }
                     }
                     else {

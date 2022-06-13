@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     private AppCompatButton btn_signin, btn_signup;
     private EditText input_id;
     private InterfaceUser interfaceUser;
-    private String USER_ID, USER_NAME;
+    private String USER_ID, temp_USER_ID, USER_NAME;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,31 +50,33 @@ public class LoginActivity extends AppCompatActivity {
                 call.enqueue(new Callback<ModelUser>() {
                     @Override
                     public void onResponse(Call<ModelUser> call, Response<ModelUser> response) {
-                        if (response != null) {
-                            ModelUser userData = response.body();
+                        ModelUser userData = response.body();
+                        temp_USER_ID = userData.getUser_id();
+                        if (temp_USER_ID.equals(USER_ID)) {
                             USER_NAME = userData.getUser_name();
                             SharedPreferences preferences = getSharedPreferences("user_data", Context.MODE_PRIVATE);
                             SharedPreferences.Editor editor = preferences.edit();
                             editor.putString("user_id", USER_ID);
                             editor.putString("user_name", USER_NAME);
                             editor.commit();
+                            Log.e(TAG, "[로그인 화면] 아이디, 이름 캐시 적재 상태 확인");
+                            Log.e(TAG, "userId = " + preferences.getString("user_id", "") + " / " + "userName = " + preferences.getString("user_name", ""));
+                            intent = new Intent(getApplicationContext(), MainActivity.class);
+                            startActivity(intent);
+                            overridePendingTransition(R.anim.go_down_1, R.anim.go_down_2);
+                            finish();
                         }
                         else {
-                            Toast.makeText(getApplicationContext(),"아이디가 존재하지 않습니다.\n다시 시도하세요.",Toast.LENGTH_SHORT);
+                            Toast.makeText(getApplicationContext(),"아이디가 존재하지 않습니다.\n다시 시도하세요.",Toast.LENGTH_SHORT).show();
                         }
                     }
 
                     @Override
                     public void onFailure(Call<ModelUser> call, Throwable t) {
                         Log.e(TAG, "onFailure: "+ t.getMessage());
-                        Toast.makeText(getApplicationContext(),"서버와의 연결이 원활하지 않습니다.\n잠시후 다시 시도하세요.",Toast.LENGTH_SHORT);
+                        Toast.makeText(getApplicationContext(),"서버와의 연결이 원활하지 않습니다.\n잠시후 다시 시도하세요.",Toast.LENGTH_SHORT).show();
                     }
                 });
-
-                intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.go_down_1, R.anim.go_down_2);
-                finish();
             }
         });
 

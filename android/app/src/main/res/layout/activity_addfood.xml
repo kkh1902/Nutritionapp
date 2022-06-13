@@ -61,6 +61,7 @@
                 android:paddingLeft="48px"
                 android:paddingRight="48px"
                 android:textColor="@color/blue_black"
+                android:inputType="text"
                 android:textSize="36px" />
 
             <androidx.appcompat.widget.AppCompatButton

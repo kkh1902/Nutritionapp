@@ -129,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
         callRecord.enqueue(new Callback<ArrayList<ModelRecord>>() {
             @Override
             public void onResponse(Call<ArrayList<ModelRecord>> call, Response<ArrayList<ModelRecord>> response) {
+                arrayList.clear();
                 Double sum_kcal = 0.0, sum_tan = 0.0, sum_dan = 0.0, sum_ji = 0.0;
                 int temp_status_kcal = 0, temp_status_tan = 0, temp_status_dan = 0, temp_status_ji = 0;
                 ArrayList<ModelRecord> records = response.body();
@@ -208,7 +209,6 @@ public class MainActivity extends AppCompatActivity {
 
         updateBarData(sel_mealtime);
 
-
         //캘린더 선택 날짜
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
@@ -231,10 +231,12 @@ public class MainActivity extends AppCompatActivity {
                 }
                 sel_mealtime = "아침";
                 updateBarData(sel_mealtime);
+
                 Call<ArrayList<ModelRecord>> call = interfaceRecord.getRecordData(USER_ID);
                 call.enqueue(new Callback<ArrayList<ModelRecord>>() {
                     @Override
                     public void onResponse(Call<ArrayList<ModelRecord>> lcal, Response<ArrayList<ModelRecord>> response) {
+                        arrayList.clear();
                         Double sum_kcal = 0.0, sum_tan = 0.0, sum_dan = 0.0, sum_ji = 0.0;
                         int temp_status_kcal = 0, temp_status_tan = 0, temp_status_dan = 0, temp_status_ji = 0;
                         ArrayList<ModelRecord> records = response.body();
@@ -285,9 +287,9 @@ public class MainActivity extends AppCompatActivity {
                         status_user_ji.setImageResource(R.drawable.img_get_error);
                     }
                 });
-                updateBarData(sel_mealtime);
             }
         });
+        updateBarData(sel_mealtime);
 
         btn_time_morning.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -435,6 +437,7 @@ public class MainActivity extends AppCompatActivity {
         call.enqueue(new Callback<ArrayList<ModelRecord>>() {
             @Override
             public void onResponse(Call<ArrayList<ModelRecord>> call, Response<ArrayList<ModelRecord>> response) {
+                arrayList.clear();
                 ArrayList<ModelRecord> foods = response.body();
                 double tempKcal = 0.0, tempTan = 0.0, tempDan = 0.0, tempJi = 0.0, tempSugar = 0.0, tempSalt = 0.0;
                 double avgKcal = 2000.0/3.0, avgTan = 292.0/3.0, avgDan = 71.0/3.0, avgJi = 49.0/3.0, avgSugar = 60.0/3.0, avgSalt = 3668.0/3.0; //임시 평균값
