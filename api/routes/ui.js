@@ -28,14 +28,14 @@ router.get("/addfood", function (req, res, next) {
     res.render("addfood", { food: [] });
 });
 
-router.post("/search", nutrition.Inquery);
+router.post("/addfood", nutrition.Inquery);
 
-router.post("/addfood", record.Record);
+router.post("/listfood/update", record.Record);
 
 router.get("/listfood", record.Inquery);
 
 router.get("/mypage", user.Inquery);
 
-router.post("/updateUserInfo", user.spec);
+router.post("/spec/update", user.Update);
 
 module.exports = router;

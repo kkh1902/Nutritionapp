@@ -10,9 +10,14 @@
             <span class="title">음식 추가</span>
         </div>
         <div class="input">
-            <form action="search" method="post">
-                <input type="text" name="food_name" placeholder="음식을 입력해주세요.">
-                <button type="submit">검색</button>
+            <form action="addfood" method="post">
+                <div class="input-row">
+                    <input type="text" name="food_name" placeholder="음식을 입력해주세요.">
+                    <button type="submit">검색</button>
+                </div>
+                <div class="search-option">
+                    <input id="opt1" type="checkbox" name="opt1" value="checked"><label for="opt1">단어가 포함된 결과 보기</label>
+                </div>
             </form>
         </div>
     </div>
@@ -24,11 +29,11 @@
             </span>
         </div>
         <%for(let data of food){%>
-        <form action="addfood" method="post">
-            <button class="item">
+        <form id="addFood" action="addfood" method="post">
+            <div class="item">
                 <div class="title">
                     <span class="material-icons">restaurant_menu</span>
-                    <%=data.food_name%>
+                    <span class="title-text"><%=data.food_name%></span>
                 </div>
                 <div class="desc">
                     <span class="tan"><%=data.tan%>g</span>
@@ -37,12 +42,41 @@
                     <span class="kcal"><%=data.kcal%>Kcal</span>
                     <span class="once"><%=data.food_once%>g</span>
                 </div>
-            </button>
-            <input type="hidden" name="food_name" value="<%=data.food_name%>">
-            <input type="hidden" name="food_amount" value="1">
-            <input type="hidden" name="meal_time" value="아침">
+            </div>
         </form>
         <%}%>
     </div>
+    <div class="modal">
+        <form action="listfood/update" method="post">
+            <h3>정보를 입력해주세요.</h3>
+            <h5 class="modal-title">음식이름</h5>
+            <input class="food_name" type="hidden" name="food_name" value="">
+            <p><span class="material-icons">rice_bowl</span>수량(단위 : 인분)</p>
+            <input type="number" name="food_amount" value="1" min="1">
+            <p><span class="material-icons">schedule</span>식사시간</p>
+            <select name="meal_time">
+                <option hidden="" disabled="disabled" selected="selected" value="">선택하세요...</option>
+                <option value="아침">아침</option>
+                <option value="점심">점심</option>
+                <option value="저녁">저녁</option>
+            </select>
+            <input type="submit" value="수정">
+        </form>
+    </div>
+    <div class="modal-bg">
+    <script>
+        $(document).ready(function () {
+            $('.item').click(function () {
+                $('.modal').toggleClass('show');
+                $('.modal-bg').toggleClass('show');
+                $('.modal-title').text($(this).find('.title-text').text());
+                $('.food_name').val($(this).find('.title-text').text());
+            });
+            $('.modal-bg').click(function () {
+                $(this).toggleClass('show');
+                $('.modal').toggleClass('show');
+            });
+        });
+    </script>
 </body>
 </html>

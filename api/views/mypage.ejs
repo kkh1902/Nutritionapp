@@ -23,19 +23,19 @@
             </div>
             <div class="bodyInfo">
                 <div class="age">
-                    <%=user_info.age%><br>
+                    <%=user_info.age%>
                     <span class="material-icons">today</span>
                 </div>
                 <div class="height">
-                    <%=user_info.height%><br>
+                    <%=user_info.height%>
                     <span class="material-icons">straighten</span>
                 </div>
                 <div class="weight">
-                    <%=user_info.weight%><br>
+                    <%=user_info.weight%>
                     <span class="material-icons">scale</span>
                 </div>
                 <div class="bmr">
-                    <%=user_info.bmr%><br>
+                    <%=user_info.bmr%>
                     <span class="material-icons">assessment</span>
                 </div>
                 <button class="changeBodyInfo">정보 수정</button>
@@ -50,12 +50,12 @@
         </div>
     </div>
     <div class="modal">
-        <form action="updateUserInfo" method="post">
-            <p>나이</p>
+        <form action="/spec/update" method="post">
+            <p><span class="material-icons">today</span>나이</p>
             <input type="text" name="age" placeholder="나이를 입력하세요.">
-            <p>키</p>
+            <p><span class="material-icons">straighten</span>키</p>
             <input type="text" name="height" placeholder="키를 입력하세요.">
-            <p>몸무게</p>
+            <p><span class="material-icons">scale</span>몸무게</p>
             <input type="text" name="weight" placeholder="몸무게를 입력하세요."><br>
             <input type="submit" value="수정">
         </form>
@@ -74,7 +74,6 @@
                 $('.modal').toggleClass('show');
             });
         });
-        AOS.init();
     </script>
 </body>
 </html>

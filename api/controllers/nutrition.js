@@ -8,13 +8,15 @@ class nutrition {
     // 음식 영양소 조회
     async Inquery(req, res) {
         try {
-            const { food_name } = req.body;
+            const { food_name, opt1 } = req.body;
             var query = food_name + "%";
+            if(opt1 == "checked"){
+                query = "%" + query;
+            }
             const food = await pool.query(
-                "select * from food2 where food_name like ? order by food_name asc limit 0 , 10",
-                [query] // 문제 db에 저장할때 필요한 것만 가져와서 select *로 조회
+                "select * from food2 where food_name like ? order by food_name asc limit 0 , 30",
+                [query]
             );
-            console.log(food[0]);
             return res.render('addfood', {food: food[0]});
         } catch (error) {
             throw error;

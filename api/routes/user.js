@@ -8,12 +8,6 @@ const user = new userController();
 router.get("/spec/:user_id", user.Inquery);
 
 /* 사용자 스펙기록 */
-router.post("/spec/:user_id", user.spec);
-
-/* 사용자 스펙 수정  및 조회*/
-router.patch("/spec/:user_id", user.modifyspec);
-
-/* 사용자 스펙 삭제 */
-router.delete("/spec/:user_id", user.delete);
+router.post("/spec/update", user.Update);
 
 module.exports = router;

@@ -27,8 +27,7 @@ body {
 }
 
 .addFood,
-.listFood,
-.mypage {
+.listFood {
     padding: 0;
     background: var(--blue-white);
 }
@@ -77,11 +76,36 @@ body {
 
 .pageHeader .input form {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     width: 100%;
 }
 
-.pageHeader .input form input {
+.pageHeader .input form .input-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.pageHeader .input form .search-option {
+    margin-top: 8px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    font-size: 16px;
+}
+
+.pageHeader .input form .search-option #opt1 {
+    height: 16px;
+    width: 16px;
+    margin: 0 8px;
+    border: none;
+    padding: 0;
+    flex: none;
+}
+
+.pageHeader .input form div input {
     flex: 8;
     margin-right: 12px;
     padding: 16px;
@@ -90,7 +114,7 @@ body {
     border-radius: 22px;
 }
 
-.pageHeader .input form button {
+.pageHeader .input form div button {
     flex: 2;
     height: 44px;
     min-width: 96px;
@@ -126,12 +150,10 @@ body {
     background-color: white;
 }
 
-.mypage {
-    background-color: var(--blue-white);
-}
 .mypage .pageHeader {
     background-color: var(--blue);
 }
+
 .pageBody {
     padding: 20px;
 }
@@ -192,6 +214,7 @@ body {
 .pageBody .item .desc .kcal {
     background-color: var(--sky);
 }
+
 .pageBody .item .desc .once {
     background-color: var(--blue-gray);
 }
@@ -215,7 +238,7 @@ body {
 }
 
 .pageBody .userInfo .defaultInfo .userName {
-    color: var(--blue-black);
+    color: white;
     padding: 0;
     margin: 0;
 }
@@ -227,7 +250,7 @@ body {
 
 .pageBody .userInfo .defaultInfo .userName p {
     margin: 0;
-    color: var(--blue-gray);
+    color: var(--blue-white);
 }
 
 .pageBody .userInfo .bodyInfo {
@@ -243,12 +266,15 @@ body {
     background-color: white;
     border-radius: 4px;
 }
+
 .pageBody .userInfo .bodyInfo div {
+    display: flex;
     text-align: center;
+    flex-direction: column;
 }
 
-.pageBody .userInfo .bodyInfo div .span {
-    font-size: 4px;
+.pageBody .userInfo .bodyInfo div span {
+    font-size: 16px;
 }
 
 .pageBody .userInfo .bodyInfo .changeBodyInfo {
@@ -348,24 +374,48 @@ body {
     background-color: var(--blue-white);
     border-radius: 8px;
 }
+
 .modal form {
     width: 100%;
-    margin: 0 20px;
+    padding: 0;
 }
+
 .modal form p {
     margin: 12px 8px;
+    display: flex;
+    align-items: center;
 }
+
+.modal form p span {
+    font-size: 16px;
+    margin-right: 8px;
+}
+
 .modal form input {
     width: 100%;
     height: 44px;
     padding: 8px 20px;
-    margin: 8px 0px;
+    margin: 8px 0;
     border: none;
     border-radius: 8px;
 }
+
+.modal form select {
+    width: 100%;
+    height: 44px;
+    padding: 8px 20px;
+    padding-right: 40px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    -webkit-appearance: none;
+}
+
 .modal form input:last-child {
     background-color: var(--blue);
+    height: 56px;
     color: white;
+    margin-bottom: 0;
 }
 
 .modal-bg {
