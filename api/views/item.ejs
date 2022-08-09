@@ -1,0 +1,17 @@
+<div class="item">
+    <div class="title">
+        <span class="material-icons">restaurant_menu</span>
+        <%=data.food_name%>
+        <form action="listfood/delete" method="post">
+            <input type="hidden" name="food_name"  value="<%=data.record_id%>" >
+            <button type="submit"><span class="material-icons">close</span></button>
+        </form>
+    </div>
+    <div class="desc">
+        <span class="tan"><%=data.tan%>g</span>
+        <span class="dan"><%=data.dan%>g</span>
+        <span class="ji"><%=data.fat%>g</span>
+        <span class="kcal"><%=data.kcal%>kcal</span>
+        <span class="once"><%=data.food_once%>kcal</span>
+    </div>
+</div>

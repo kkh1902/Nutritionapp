@@ -13,10 +13,10 @@
             <form action="addfood" method="post">
                 <div class="input-row">
                     <input type="text" name="food_name" placeholder="음식을 입력해주세요.">
-                    <button type="submit">검색</button>
+                    <button class="search" type="submit">검색</button>
                 </div>
                 <div class="search-option">
-                    <input id="opt1" type="checkbox" name="opt1" value="checked"><label for="opt1">단어가 포함된 결과 보기</label>
+                    <input id="opt1" type="checkbox" name="opt1" value="checked"><label for="opt1">단어가 포함된 결과로 검색하기</label>
                 </div>
             </form>
         </div>
@@ -60,10 +60,16 @@
                 <option value="점심">점심</option>
                 <option value="저녁">저녁</option>
             </select>
-            <input type="submit" value="수정">
+            <input type="submit" value="추가">
         </form>
     </div>
-    <div class="modal-bg">
+    <div class="loading">
+        <div class="wrapper">
+            <div class="spinner"></div>
+        </div>
+        <p>페이지를 불러오는 중입니다...</p>
+    </div>
+    <div class="modal-bg"></div>
     <script>
         $(document).ready(function () {
             $('.item').click(function () {
@@ -72,6 +78,10 @@
                 $('.modal-title').text($(this).find('.title-text').text());
                 $('.food_name').val($(this).find('.title-text').text());
             });
+            $('.search').click(function () {
+                $('.loading').toggleClass('show');
+                $('.modal-bg').toggleClass('show');
+            })
             $('.modal-bg').click(function () {
                 $(this).toggleClass('show');
                 $('.modal').toggleClass('show');

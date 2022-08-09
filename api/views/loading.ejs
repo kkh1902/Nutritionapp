@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include ./head.ejs%>  
+</head>
+<body>
+    <button class="search">로딩</button>
+    <div class="loading">
+        <div class="spinner"></div>
+        <p class="loading-text">페이지를 불러오는 중입니다...</p>
+    </div>
+    <div class="modal-bg"></div>
+    <script>
+        $(document).ready(function () {
+            $('.search').click(function () {
+                $('.loading').toggleClass('show');
+                $('.modal-bg').toggleClass('show');
+            })
+        });
+    </script>
+</body>
+</html>

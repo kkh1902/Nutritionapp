@@ -19,6 +19,7 @@ class nutrition {
             );
             return res.render('addfood', {food: food[0]});
         } catch (error) {
+            return res.redirect('/');
             throw error;
         }
     }
@@ -34,7 +35,8 @@ class nutrition {
 
             return res.send(recommend_food[0]);
         } catch (error) {
-            return res.status(500).json(error);
+            return res.redirect('/');
+            throw error;
         }
     }
 }
