@@ -14,10 +14,10 @@ class nutrition {
                 "select * from food2 where food_name like ? order by food_name asc limit 0 , 10",
                 [query] // 문제 db에 저장할때 필요한 것만 가져와서 select *로 조회
             );
-
-            return res.send(food[0]);
+            console.log(food[0]);
+            return res.render('addfood', {food: food[0]});
         } catch (error) {
-            return res.status(500).json(error);
+            throw error;
         }
     }
 

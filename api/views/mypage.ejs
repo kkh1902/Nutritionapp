@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include ./head.ejs%>  
+</head>
+<body class="mypage">
+    <div class="pageHeader">
+        <div class="navbar">
+            <a class="funcBtn" href="/"><span class="material-icons">arrow_back</span></a>
+            <span class="title">마이페이지</span>
+        </div>
+    </div>
+    <div class="pageBody">
+        <div class="userInfo">
+            <div class="defaultInfo">
+                <div class="userImg">
+                    <img src="" alt="">
+                </div>
+                <div class="userName">
+                    <h1><%=user_info.user_name%></h1>
+                    <p><%=user_info.user_id%></p>
+                </div>
+            </div>
+            <div class="bodyInfo">
+                <div class="age">
+                    <%=user_info.age%><br>
+                    <span class="material-icons">today</span>
+                </div>
+                <div class="height">
+                    <%=user_info.height%><br>
+                    <span class="material-icons">straighten</span>
+                </div>
+                <div class="weight">
+                    <%=user_info.weight%><br>
+                    <span class="material-icons">scale</span>
+                </div>
+                <div class="bmr">
+                    <%=user_info.bmr%><br>
+                    <span class="material-icons">assessment</span>
+                </div>
+                <button class="changeBodyInfo">정보 수정</button>
+            </div>
+        </div>
+        <div class="boardList">
+            <div class="board"><span class="material-icons">campaign</span>공지사항</div>
+            <div class="board"><span class="material-icons">record_voice_over</span>고객센터</div>
+            <div class="board"><span class="material-icons">question_answer</span>1:1상담</div>
+            <div class="board"><span class="material-icons">ballot</span>사용자 설문</div>
+            <div class="board"><span class="material-icons">info</span>버전 정보</div>
+        </div>
+    </div>
+    <div class="modal">
+        <form action="updateUserInfo" method="post">
+            <p>나이</p>
+            <input type="text" name="age" placeholder="나이를 입력하세요.">
+            <p>키</p>
+            <input type="text" name="height" placeholder="키를 입력하세요.">
+            <p>몸무게</p>
+            <input type="text" name="weight" placeholder="몸무게를 입력하세요."><br>
+            <input type="submit" value="수정">
+        </form>
+    </div>
+    <div class="modal-bg">
+
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('.changeBodyInfo').click(function () {
+                $('.modal').toggleClass('show');
+                $('.modal-bg').toggleClass('show');
+            });
+            $('.modal-bg').click(function () {
+                $(this).toggleClass('show');
+                $('.modal').toggleClass('show');
+            });
+        });
+        AOS.init();
+    </script>
+</body>
+</html>

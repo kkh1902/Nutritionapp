@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include ./head.ejs%>  
+</head>
+<body class="listFood">
+    <div class="pageHeader">
+        <div class="navbar">
+            <a class="funcBtn" href="/"><span class="material-icons">arrow_back</span></a>
+            <span class="title">음식 목록</span>
+        </div>
+        <div class="select">
+            <button class="t1 selected">아침</button>
+            <button class="t2">점심</button>
+            <button class="t3">저녁</button>
+        </div>
+    </div>
+    <div class="pageBody">
+        <div class="itemList">
+            <span>
+                <span class="material-icons">format_list_bulleted</span>
+                <span class="amount"></span>
+            </span>
+        </div>
+        <div id="res">
+            <%for(let data of user_record){ if(data.meal_time == "아침"){%>
+            <div class="item">
+                <div class="title">
+                    <span class="material-icons">restaurant_menu</span>
+                    <%=data.food_name%>
+                </div>
+                <div class="desc">
+                    <span class="tan"><%=data.tan%>g</span>
+                    <span class="dan"><%=data.dan%>g</span>
+                    <span class="ji"><%=data.fat%>g</span>
+                    <span class="kcal"><%=data.kcal%>kcal</span>
+                    <span class="once"><%=data.food_once%>kcal</span>
+                </div>
+            </div>
+            <%}}%>
+        </div>
+    </div>
+    <script>
+        function reset() {
+            $('.t1').removeClass('selected');
+            $('.t2').removeClass('selected');
+            $('.t3').removeClass('selected');
+            return false;
+        }
+        function selTime() {
+            reset();
+            $(this).addClass('selected');
+            if($(this).text()=="아침") {
+                $('#res').html(`
+                <%for(let data of user_record){ if(data.meal_time == "아침"){%>
+                <div class="item">
+                    <div class="title">
+                        <span class="material-icons">restaurant_menu</span>
+                        <%=data.food_name%>
+                    </div>
+                    <div class="desc">
+                        <span class="tan"><%=data.tan%>g</span>
+                        <span class="dan"><%=data.dan%>g</span>
+                        <span class="ji"><%=data.fat%>g</span>
+                        <span class="kcal"><%=data.kcal%>kcal</span>
+                        <span class="once"><%=data.food_once%>kcal</span>
+                    </div>
+                </div>
+                <%}}%>
+                `);
+            } else if($(this).text()=="점심") {
+                $('#res').html(`
+                <%for(let data of user_record){ if(data.meal_time == "점심"){%>
+                <div class="item">
+                    <div class="title">
+                        <span class="material-icons">restaurant_menu</span>
+                        <%=data.food_name%>
+                    </div>
+                    <div class="desc">
+                        <span class="tan"><%=data.tan%>g</span>
+                        <span class="dan"><%=data.dan%>g</span>
+                        <span class="ji"><%=data.fat%>g</span>
+                        <span class="kcal"><%=data.kcal%>kcal</span>
+                        <span class="once"><%=data.food_once%>kcal</span>
+                    </div>
+                </div>
+                <%}}%>
+                `);
+            } else if($(this).text()=="저녁") {
+                $('#res').html(`
+                <%for(let data of user_record){ if(data.meal_time == "저녁"){%>
+                <div class="item">
+                    <div class="title">
+                        <span class="material-icons">restaurant_menu</span>
+                        <%=data.food_name%>
+                    </div>
+                    <div class="desc">
+                        <span class="tan"><%=data.tan%>g</span>
+                        <span class="dan"><%=data.dan%>g</span>
+                        <span class="ji"><%=data.fat%>g</span>
+                        <span class="kcal"><%=data.kcal%>kcal</span>
+                        <span class="once"><%=data.food_once%>kcal</span>
+                    </div>
+                </div>
+                <%}}%>
+                `);
+            }
+            $('.amount').text("총 "+$('.item').length+"개");
+            return this;
+        }
+        $('.t1').click(selTime);
+        $('.t2').click(selTime);
+        $('.t3').click(selTime);
+        $('.amount').text("총 "+$('.item').length+"개");
+    </script>
+</body>
+</html>

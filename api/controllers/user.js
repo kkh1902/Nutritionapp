@@ -7,13 +7,13 @@ class user {
 
     async Inquery(req, res) {
         try {
-            const { user_id } = req.params;
+            const user_id = 300;
 
-            const user_information = await pool.query(
+            const user_info = await pool.query(
                 "select * from user where user_id=?",
                 [user_id]
             );
-            return res.send(user_information[0][0]);
+            return res.render('mypage', {user_info: user_info[0][0]});
         } catch (error) {
             return res.status(500).json(error);
         }
@@ -22,8 +22,8 @@ class user {
     // 바디 스펙 기록
     async spec(req, res) {
         try {
-            const { user_id } = req.params;
-            const { gender, weight, height, user_name, age } = req.body;
+            const user_id = 300;
+            const { age, height, weight } = req.body;
 
             const user_spec = await pool.query(
                 "insert into user(user_id, gender, weight, height, age, user_name) values (?, ?, ?, ?, ? ,?) ",

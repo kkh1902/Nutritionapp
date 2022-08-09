@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include ./head.ejs%>  
+</head>
+<body class="addFood">
+    <div class="pageHeader">
+        <div class="navbar">
+            <a class="funcBtn" href="/"><span class="material-icons">arrow_back</span></a>
+            <span class="title">음식 추가</span>
+        </div>
+        <div class="input">
+            <form action="search" method="post">
+                <input type="text" name="food_name" placeholder="음식을 입력해주세요.">
+                <button type="submit">검색</button>
+            </form>
+        </div>
+    </div>
+    <div class="pageBody">
+        <div class="itemList">
+            <span>
+                <span class="material-icons">format_list_bulleted</span>
+                총 <%=food.length%>개의 결과
+            </span>
+        </div>
+        <%for(let data of food){%>
+        <form action="addfood" method="post">
+            <button class="item">
+                <div class="title">
+                    <span class="material-icons">restaurant_menu</span>
+                    <%=data.food_name%>
+                </div>
+                <div class="desc">
+                    <span class="tan"><%=data.tan%>g</span>
+                    <span class="dan"><%=data.dan%>g</span>
+                    <span class="ji"><%=data.fat%>g</span>
+                    <span class="kcal"><%=data.kcal%>Kcal</span>
+                    <span class="once"><%=data.food_once%>g</span>
+                </div>
+            </button>
+            <input type="hidden" name="food_name" value="<%=data.food_name%>">
+            <input type="hidden" name="food_amount" value="1">
+            <input type="hidden" name="meal_time" value="아침">
+        </form>
+        <%}%>
+    </div>
+</body>
+</html>

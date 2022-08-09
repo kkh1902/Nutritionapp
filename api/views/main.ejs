@@ -1,23 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <%-include ./head.ejs%>
-    <link href='stylesheets/main.css' rel='stylesheet' />
-    <script src='javascripts/main.js'></script>
-    <script>
-
-        document.addEventListener('DOMContentLoaded', function() {
-          var calendarEl = document.getElementById('calendar');
-          var calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: 'dayGridMonth'
-          });
-          calendar.render();
-        });
-  
-      </script>
+    <%-include ./head.ejs%>  
 </head>
 <body>
+    <div class="container">
+        달력 추가할 위치
+        <a href="/addfood">addfood</a>
+        <a href="/listfood">listfood</a>
+        <a href="/mypage">mypage</a>
+        <a href="/signin">signin</a>
+        <a href="/signup">signup</a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+    </div>
+    <div>
+
+    </div>
+    <div class="container">
+        <span>...님이 섭취하신 영양소입니다.</span>
+        <div class="graph">
+            <div class="data">
+                <span class="bar"></span>
+                <h6>탄수화물</h6>
+            </div>
+            <div class="data">
+                <span class="bar"></span>
+                <h6>단백질</h6>
+            </div>
+            <div class="data">
+                <span class="bar"></span>
+                <h6>지방</h6>
+            </div>
+            <div class="data">
+                <span class="bar"></span>
+                <h6>칼로리</h6>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="https://kit.fontawesome.com/9be13940d3.js" crossorigin="anonymous"></script>
+<script>AOS.init();</script>
 </html>
