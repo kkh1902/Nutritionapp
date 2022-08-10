@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include ./head.ejs%>  
+</head>
+<body class="main">
+    <div class="pageHeader">
+        <div class="navbar-main">
+            <h1 class="title">먹보</h1>
+            <a class="profile" href="/signin"><span class="material-icons">account_circle</span>홍길동</a>
+        </div>
+    </div>
+    <div class="pageBody">
+        <div class="container">
+            달력 추가할 위치
+        </div>
+        <div class="container">
+            <span>...님이 섭취하신 영양소입니다.</span>
+            <div class="graph">
+                <div class="data">
+                    <span class="bar"></span>
+                    <h6>탄수화물</h6>
+                </div>
+                <div class="data">
+                    <span class="bar"></span>
+                    <h6>단백질</h6>
+                </div>
+                <div class="data">
+                    <span class="bar"></span>
+                    <h6>지방</h6>
+                </div>
+                <div class="data">
+                    <span class="bar"></span>
+                    <h6>칼로리</h6>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h1>먹보's PICK</h1>
+            <p>이러한 음식을 섭취해 보세요!</p>
+            <button>더보기</button>
+        </div>
+        <div class="grid-row">
+            <div class="container">
+                <h3>섭취한 칼로리</h3>
+                <p>00.0 Kcal</p>
+            </div>
+            <div class="container">
+                <h3>섭취한 탄수화물</h3>
+                <p>00.0 g</p>
+            </div>
+        </div>
+        <div class="grid-row">
+            <div class="container">
+                <h3>섭취한 단백질</h3>
+                <p>00.0 g</p>
+            </div>
+            <div class="container">
+                <h3>섭취한 지방</h3>
+                <p>00.0 g</p>
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <a class="link" href="/searchfood"><span class="material-icons">add_box</span></a>
+        <a class="link" href="/listfood"><span class="material-icons">ballot</span></a>
+        <a class="link" href="/calendar"><span class="material-icons">calendar_month</span></a>
+        <a class="link" href="/mypage"><span class="material-icons">account_box</span></a>
+    </div>
+    <div class="loading">
+        <!-- <div class="spinner"></div> -->
+        <div class="wrap">
+            <div class="state"></div>
+            <div class="state"></div>
+            <div class="state"></div>
+            <div class="state"></div>
+            <div class="state"></div>
+        </div>
+        <p class="loading-text">페이지를 불러오는 중입니다.</p>
+    </div>
+    <div class="modal-bg"></div>
+    <script>
+        $(document).ready(function () {
+            $('.link').click(function () {
+                $('.loading').toggleClass('show');
+                $('.modal-bg').toggleClass('show');
+            })
+            $('.modal-bg').click(function () {
+                $(this).toggleClass('show');
+                $('.modal').toggleClass('show');
+            });
+        });
+    </script>
+</body>
+</html>
