@@ -8,6 +8,7 @@
         <div class="navbar">
             <a class="funcBtn" href="/"><span class="material-icons">arrow_back</span></a>
             <span class="title">음식 목록</span>
+            <a class="linkBtn"><span class="material-icons"></span></a>
         </div>
         <div class="select">
             <button class="t1 selected">아침</button>
@@ -23,7 +24,7 @@
             </span>
         </div>
         <div id="res">
-            <%for(let data of user_record){ if(data.meal_time == "아침"){%>
+            <%for(let data of cart_data){ if(data.meal_time == "아침"){%>
             <div class="item">
                 <div class="title">
                     <span class="material-icons">restaurant_menu</span>
@@ -37,13 +38,29 @@
                     <span class="once"><%=data.food_once%>kcal</span>
                 </div>
                 <form class="func" action="listfood/delete" method="post">
-                    <input type="hidden" name="record_id"  value="<%=data.record_id%>" >
+                    <input type="hidden" name="cart_id"  value="<%=data.cart_id%>" >
                     <button type="submit"><span class="material-icons">close</span></button>
                 </form>
             </div>
             <%}}%>
         </div>
     </div>
+    <div class="listpost">
+        <span class="material-icons">edit_calendar</span>
+    </div>
+    <div class="modal">
+        <form action="listfood/record" method="post">
+            <h3>목록을 추가할 날짜를 선택해주세요.</h3>
+            <p><span class="material-icons">today</span>년/월/일</p>
+            <div class="date-selecter">
+                <input class="year" type="number" name="year" value="" min="2000" max="2100">
+                <input class="month" type="number" name="month" value="" min="1" max="12">
+                <input class="day" type="number" name="day" value="" min="1" max="12">
+            </div>
+            <input type="submit" value="기록">
+        </form>
+    </div>
+    <div class="modal-bg"></div>
     <script>
         function reset() {
             $('.t1').removeClass('selected');
@@ -56,7 +73,7 @@
             $(this).addClass('selected');
             if($(this).text()=="아침") {
                 $('#res').html(`
-                <%for(let data of user_record){ if(data.meal_time == "아침"){%>
+                <%for(let data of cart_data){ if(data.meal_time == "아침"){%>
                 <div class="item">
                     <div class="title">
                         <span class="material-icons">restaurant_menu</span>
@@ -70,7 +87,7 @@
                         <span class="once"><%=data.food_once%>kcal</span>
                     </div>
                     <form class="func" action="listfood/delete" method="post">
-                        <input type="hidden" name="record_id"  value="<%=data.record_id%>" >
+                        <input type="hidden" name="cart_id"  value="<%=data.cart_id%>" >
                         <button type="submit"><span class="material-icons">close</span></button>
                     </form>
                 </div>
@@ -78,7 +95,7 @@
                 `);
             } else if($(this).text()=="점심") {
                 $('#res').html(`
-                <%for(let data of user_record){ if(data.meal_time == "점심"){%>
+                <%for(let data of cart_data){ if(data.meal_time == "점심"){%>
                 <div class="item">
                     <div class="title">
                         <span class="material-icons">restaurant_menu</span>
@@ -92,7 +109,7 @@
                         <span class="once"><%=data.food_once%>kcal</span>
                     </div>
                     <form class="func" action="listfood/delete" method="post">
-                        <input type="hidden" name="record_id"  value="<%=data.record_id%>" >
+                        <input type="hidden" name="cart_id"  value="<%=data.cart_id%>" >
                         <button type="submit"><span class="material-icons">close</span></button>
                     </form>
                 </div>
@@ -100,7 +117,7 @@
                 `);
             } else if($(this).text()=="저녁") {
                 $('#res').html(`
-                <%for(let data of user_record){ if(data.meal_time == "저녁"){%>
+                <%for(let data of cart_data){ if(data.meal_time == "저녁"){%>
                 <div class="item">
                     <div class="title">
                         <span class="material-icons">restaurant_menu</span>
@@ -114,7 +131,7 @@
                         <span class="once"><%=data.food_once%>kcal</span>
                     </div>
                     <form class="func" action="listfood/delete" method="post">
-                        <input type="hidden" name="record_id"  value="<%=data.record_id%>" >
+                        <input type="hidden" name="cart_id"  value="<%=data.cart_id%>" >
                         <button type="submit"><span class="material-icons">close</span></button>
                     </form>
                 </div>
@@ -128,6 +145,26 @@
         $('.t2').click(selTime);
         $('.t3').click(selTime);
         $('.amount').text("총 "+$('.item').length+"개");
+
+        $('.listpost').click(function () {
+            $('.modal').toggleClass('show');
+            $('.modal-bg').toggleClass('show');
+        })
+        $('.modal-bg').click(function () {
+            $(this).toggleClass('show');
+            $('.modal').toggleClass('show');
+        });
+        var today = new Date();
+        var year = today.getFullYear();
+        var month = today.getMonth() + 1;
+        var day = today.getDate();
+        var lastDay = new Date(year, month, 0).getDate();
+        $('.year').val(year);
+        $('.month').val(month);
+        $('.day').val(day);
+        $('.day').attr({
+            "max" : lastDay
+        });
     </script>
 </body>
 </html>

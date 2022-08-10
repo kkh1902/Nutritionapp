@@ -7,16 +7,18 @@
     <div class="pageHeader">
         <div class="navbar">
             <a class="funcBtn" href="/"><span class="material-icons">arrow_back</span></a>
-            <span class="title">음식 추가</span>
+            <span class="title">영양소 검색</span>
+            <a class="linkBtn" href="/listfood"><span class="material-icons">ballot</span></a>
         </div>
         <div class="input">
-            <form action="addfood" method="post">
+            <form action="searchfood" method="post">
                 <div class="input-row">
                     <input type="text" name="food_name" placeholder="음식을 입력해주세요.">
                     <button class="search" type="submit">검색</button>
                 </div>
                 <div class="search-option">
-                    <input id="opt1" type="checkbox" name="opt1" value="checked"><label for="opt1">단어가 포함된 결과로 검색하기</label>
+                    <input id="opt1" type="checkbox" name="opt1" value="checked">
+                    <label for="opt1">단어가 포함된 결과로 검색하기</label>
                 </div>
             </form>
         </div>
@@ -29,7 +31,7 @@
             </span>
         </div>
         <%for(let data of food){%>
-        <form id="addFood" action="addfood" method="post">
+        <form id="addFood" action="searchfood" method="post">
             <div class="item">
                 <div class="title">
                     <span class="material-icons">restaurant_menu</span>
@@ -64,10 +66,15 @@
         </form>
     </div>
     <div class="loading">
-        <div class="wrapper">
-            <div class="spinner"></div>
+        <!-- <div class="spinner"></div> -->
+        <div class="wrap">
+            <div class="state"></div>
+            <div class="state"></div>
+            <div class="state"></div>
+            <div class="state"></div>
+            <div class="state"></div>
         </div>
-        <p>페이지를 불러오는 중입니다...</p>
+        <p class="loading-text">음식 데이터를 불러오는 중입니다.</p>
     </div>
     <div class="modal-bg"></div>
     <script>

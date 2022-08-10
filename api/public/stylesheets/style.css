@@ -1,6 +1,6 @@
 :root {
     --blue: #3572e3;
-    --blue-light: #538ffe;
+    --blue-light: #6199ff;
     --blue-dark: #225bc5;
     --blue-white: #f0f3f5;
     --blue-gray: #8b9db0;
@@ -57,23 +57,40 @@ a:hover {
     background-color: var(--blue);
 }
 
-.pageHeader .navbar {
+/* NAVBAR */
+.navbar {
     display: flex;
     padding: 0;
     width: 100%;
-    justify-content: start;
+    color: white;
+    justify-content: space-between;
     align-items: center;
 }
-
-.pageHeader .navbar-main {
+.navbar > .funcBtn, .navbar > .linkBtn {
+    width: 48px;
+    padding: 8px;
+    color: white;
+    text-decoration: none;
+}
+.navbar > .funcBtn:hover, .navbar > .linkBtn:hover {
+    color: var(--blue-white);
+}
+.navbar > .funcBtn > span, .linkBtn > span {
+    font-size: 32px;
+}
+.navbar .title {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+}
+.navbar-main {
     display: flex;
     padding: 0;
     width: 100%;
     justify-content: space-between;
     align-items: center;
 }
-
-.pageHeader .navbar-main .profile {
+.navbar-main .profile {
     display: flex;
     align-items: center;
     border: none;
@@ -83,24 +100,10 @@ a:hover {
     font-size: 16px;
     padding: 12px;
 }
-
-.pageHeader .navbar-main .profile span{
+.navbar-main .profile span{
     margin-right: 8px;
 }
-
-.pageHeader .navbar .funcBtn {
-    width: 36px;
-    font-size: 24px;
-    color: white;
-    text-decoration: none;
-}
-
-.pageHeader .navbar .title {
-    display: flex;
-    font-size: 28px;
-    align-items: center;
-}
-
+/* INPUT */
 .pageHeader .input {
     margin-top: 12px;
     display: flex;
@@ -200,7 +203,7 @@ a:hover {
 
 .pageBody .itemList {
 
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 
 .pageBody .itemList span {
@@ -210,16 +213,17 @@ a:hover {
 .pageBody .item {
     flex-direction: column;
     position: relative;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     padding: 20px;
     width: 100%;
     background-color: white;
-    border: none;
+    border: 2px solid white;
     border-radius: 4px;
-    box-shadow: 0px 0px 4px var(--blue-white);
+    box-shadow: 0px 0px 4px var(--blue- );
 }
 .pageBody .item:hover {
     background-color: var(--blue-white);
+    border: 2px solid var(--blue);
     box-shadow: 0px 0px 2px var(--blue-gray);
 }
 
@@ -232,7 +236,7 @@ a:hover {
     width: 100%;
     display: inline-block;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     font-size: 24px;
 }
 .pageBody .item .func {
@@ -251,12 +255,8 @@ a:hover {
     font-size: 16px;
 }
 
-.pageBody .item .desc .tan,
-.dan,
-.ji,
-.kcal,
-.once {
-    padding: 4px;
+.pageBody .item .desc span {
+    padding: 4px 8px;
     color: white;
     background-color: var(--blue);
     border-radius: 4px;
@@ -323,35 +323,38 @@ a:hover {
     align-items: center;
     font-size: 24px;
     font-weight: bold;
-    padding: 12px 20px;
-    margin-bottom: 12px;
+    padding: 20px;
     color: var(--blue-black);
     background-color: white;
-    border-radius: 4px;
+    border-radius: 4px 4px 0 0;
 }
 
 .pageBody .userInfo .bodyInfo div {
     display: flex;
     text-align: center;
     flex-direction: column;
+    padding: 0 8px;
 }
 
 .pageBody .userInfo .bodyInfo div span {
     font-size: 16px;
+    font-weight: 500;
+    vertical-align: middle;
 }
 
-.pageBody .userInfo .bodyInfo .changeBodyInfo {
-    padding: 8px 16px;
-    border-radius: 4px;
+.pageBody .userInfo .changeBodyInfo {
+    width: 100%;
+    padding: 12px;
+    border-radius: 0 0 4px 4px;
     font-size: 16px;
     color: white;
-    background-color: var(--blue);
+    background: var(--blue-dark);
     border: none;
+    margin-bottom: 16px;
 }
 
-.pageBody .userInfo .bodyInfo .changeBodyInfo:hover {
-    background-color: var(--blue-dark);
-    box-shadow: 0px 0px 2px var(--blue-white);
+.pageBody .userInfo .changeBodyInfo:hover {
+    background-color: var(--blue-light);
 }
 
 .pageBody .boardList {
@@ -441,6 +444,51 @@ a:hover {
     border-radius: 4px;
 }
 
+.menu {
+    display: flex;
+    position: fixed;
+    padding: 12px;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: white;
+    justify-content: space-between;
+    box-shadow: 0px 0px 4px var(--blue-gray);
+    border-radius: 16px;
+    z-index: 1100;
+}
+.menu .link span {
+    font-size: 56px;
+    margin: 0;
+}
+
+.listpost {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    transform: translate(0, 0);
+    width: 64px;
+    height: 64px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0px 0px 4px var(--blue-gray);
+    z-index: 1100;
+    font-size: 24px;
+    color: var(--blue-black);
+    background-color: white;
+}
+.listpost:hover {
+    color: white;
+    background-color: var(--blue);
+}
+.listpost span{
+    text-align: center;
+    vertical-align: middle;
+}
+
 .modal {
     display: none;
     position: fixed;
@@ -452,27 +500,23 @@ a:hover {
     transform: translate(-50%, -50%);
     width: 80vw;
     height: auto;
-    z-index: 1100;
+    z-index: 1301;
     background-color: var(--blue-white);
     border-radius: 8px;
 }
-
 .modal form {
     width: 100%;
     padding: 0;
 }
-
 .modal form p {
     margin: 12px 8px;
     display: flex;
     align-items: center;
 }
-
 .modal form p span {
     font-size: 16px;
     margin-right: 8px;
 }
-
 .modal form input {
     width: 100%;
     height: 36px;
@@ -481,7 +525,6 @@ a:hover {
     border: none;
     border-radius: 8px;
 }
-
 .modal form select {
     width: 100%;
     height: 36px;
@@ -492,12 +535,28 @@ a:hover {
     border-radius: 8px;
     -webkit-appearance: none;
 }
-
-.modal form input:last-child {
+.modal form > input:last-child {
     background-color: var(--blue);
     height: 56px;
     color: white;
     margin-bottom: 0;
+}
+.modal form .date-selecter {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.modal form .date-selecter input {
+    flex: 1;
+}
+.modal form input:first-child {
+    flex: 1.5;
+}
+.modal form input:nth-child(2) {
+    margin: 8px;
+}
+.modal form input:last-child {
+    flex: 1;
 }
 
 .modal-bg {
@@ -507,7 +566,7 @@ a:hover {
     left: 0;
     width: 100vw;
     height: 100%;
-    z-index: 1001;
+    z-index: 1300;
     background-color: var(--blue-black);
     opacity: 0.7;
 }
@@ -522,7 +581,7 @@ a:hover {
     top: 50%;
     left: 50%;
     height: 400px;
-    z-index: 1500;
+    z-index: 2000;
     transform: translate(-50%, -50%);
     color: white;
 }
@@ -536,34 +595,45 @@ a:hover {
     border-radius: 50%;
     animation: spin 1.5s linear infinite;
 }
+.loading .wrap {
+    display: flex;
+    justify-content:space-around;
+    margin-bottom: 20px;
+}
+.loading .state {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+    animation: pop 0.5s ease-in-out infinite;
+}
+.loading .state:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.loading .state:nth-child(3) {
+    animation-delay: 0.2s;
+}
+.loading .state:nth-child(4) {
+    animation-delay: 0.3s;
+}
+.loading .state:nth-child(5) {
+    animation-delay: 0.4s;
+}
 .loading .loading-text {
     width: 100%;
     text-align: center;
 }
-
-.show {
-    display: flex;
-}
-
-.menu {
-    display: flex;
-    position: fixed;
-    padding: 8px;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -120%);
-    background-color: white;
-    justify-content: space-between;
-    box-shadow: 0px 0px 4px var(--blue-gray);
-    border-radius: 16px;
-    z-index: 1300;
-}
-
-.menu .link span {
-    font-size: 48px;
-}
-
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+@keyframes pop {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(0, -200%); }
+    100% { transform: translate(0, 0); }
+}
+
+.show {
+    display: flex;
 }
