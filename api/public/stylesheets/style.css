@@ -17,6 +17,7 @@
 }
 
 body {
+    font-family: 'AppleSDGothicNeo', 'Noto Sans KR', sans-serif;
     color: var(--blue-black);
     display: flex;
     flex-direction: column;
@@ -384,7 +385,7 @@ a:hover {
 }
 
 .pageBody .signform {
-
+    color: white;
 }
 
 .pageBody .signform p {
