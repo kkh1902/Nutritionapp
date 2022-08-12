@@ -20,9 +20,13 @@ body {
     font-family: 'AppleSDGothicNeo', 'Noto Sans KR', sans-serif;
     color: var(--blue-black);
     display: flex;
+    width: 100%;
+    min-width: 670px;
+    max-width: 768px;
     flex-direction: column;
     justify-items: center;
-    margin: 0;
+    align-items: center;
+    margin: 0 auto;
     padding: 0;
     background-color: var(--blue);
 }
@@ -51,6 +55,7 @@ a:hover {
 }
 
 .pageHeader {
+    width: 100%;
     padding: 12px 20px;
     display: flex;
     flex-direction: column;
@@ -199,6 +204,7 @@ a:hover {
 }
 
 .pageBody {
+    width: 100%;
     padding: 20px;
 }
 
