@@ -1,8 +1,646 @@
+:root {
+    --blue: #3572e3;
+    --blue-light: #6199ff;
+    --blue-dark: #225bc5;
+    --blue-white: #f0f3f5;
+    --blue-gray: #8b9db0;
+    --blue-black: #12283e;
+    --red: #CD4935;
+    --yellow: #EBC044;
+    --green: #3A7959;
+    --blue-light: #3C4997;
+    --sky: #4690BF;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-family: 'AppleSDGothicNeo', 'Noto Sans KR', sans-serif;
+    color: var(--blue-black);
+    display: flex;
+    width: 100%;
+    min-width: 670px;
+    max-width: 768px;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    background-color: var(--blue);
 }
 
 a {
-  color: #00B7FF;
+    color: var(--blue-black);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--blue);
+}
+
+.main {
+    padding: 16px 0;
+}
+
+.addFood,
+.listFood {
+    background: var(--blue-white);
+}
+
+.signin,
+.singup,
+.mypage {
+    background: var(--blue);
+}
+
+.pageHeader {
+    width: 100%;
+    padding: 12px 20px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: var(--blue);
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    padding: 0;
+    width: 100%;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar > .funcBtn, .navbar > .linkBtn {
+    width: 48px;
+    padding: 8px;
+    color: white;
+    text-decoration: none;
+}
+.navbar > .funcBtn:hover, .navbar > .linkBtn:hover {
+    color: var(--blue-white);
+}
+.navbar > .funcBtn > span, .linkBtn > span {
+    font-size: 32px;
+}
+.navbar .title {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+}
+.navbar-main {
+    display: flex;
+    padding: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-main .profile {
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 18px;
+    background-color: white;
+    height: 36px;
+    font-size: 16px;
+    padding: 12px;
+}
+.navbar-main .profile span{
+    margin-right: 8px;
+}
+/* INPUT */
+.pageHeader .input {
+    margin-top: 12px;
+    display: flex;
+    width: 100%;
+}
+
+.pageHeader .input form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.pageHeader .input form .input-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.pageHeader .input form .input-row button {
+    background-color: white;
+    color: var(--blue-black);
+}
+.pageHeader .input form .input-row button:hover {
+    background-color: var(--blue-white);
+}
+
+.pageHeader .input form .search-option {
+    margin-top: 8px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    font-size: 16px;
+}
+
+.pageHeader .input form .search-option #opt1 {
+    height: 16px;
+    width: 16px;
+    margin: 0 8px;
+    border: none;
+    padding: 0;
+    flex: none;
+}
+
+.pageHeader .input form div input {
+    flex: 8;
+    margin-right: 12px;
+    padding: 16px;
+    height: 36px;
+    border: 1px solid var(--blue-white);
+    border-radius: 22px;
+}
+
+.pageHeader .input form div button {
+    flex: 2;
+    height: 36px;
+    min-width: 96px;
+    max-width: 128px;
+    border: 1px solid var(--blue-white);
+    border-radius: 22px;
+}
+
+.pageHeader .select {
+    margin-top: 12px;
+    display: flex;
+    width: 100%;
+}
+
+.pageHeader .select button {
+    flex: 1;
+    color: var(--blue-gray);
+    background-color: var(--blue-white);
+    height: 36px;
+    border: 1px solid white;
+}
+
+.pageHeader .select button:first-child {
+    border-radius: 22px 0 0 22px;
+}
+
+.pageHeader .select button:last-child {
+    border-radius: 0 22px 22px 0;
+}
+
+.pageHeader .select .selected {
+    color: var(--blue-black);
+    background-color: white;
+}
+
+.mypage .pageHeader {
+    background-color: var(--blue);
+}
+
+.pageBody {
+    width: 100%;
+    padding: 20px;
+}
+
+.pageBody .itemList {
+
+    margin-bottom: 16px;
+}
+
+.pageBody .itemList span {
+    font-size: 16px;
+}
+
+.pageBody .item {
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 16px;
+    padding: 20px;
+    width: 100%;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px var(--blue- );
+}
+.pageBody .item:hover {
+    background-color: var(--blue-white);
+    border: 2px solid var(--blue);
+    box-shadow: 0px 0px 2px var(--blue-gray);
+}
+
+.listFood .pageBody .item:hover {
+    background-color: white;
+    box-shadow: none;
+}
+
+.pageBody .item .title {
+    width: 100%;
+    display: inline-block;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+.pageBody .item .func {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+
+.pageBody .item .func button {
+    color: var(--blue-gray);
+    background: none;
+    border: none;
+}
+
+.pageBody .item .desc {
+    font-size: 16px;
+}
+
+.pageBody .item .desc span {
+    padding: 4px 8px;
+    color: white;
+    background-color: var(--blue);
+    border-radius: 4px;
+}
+
+.pageBody .item .desc .tan {
+    background-color: var(--green);
+}
+
+.pageBody .item .desc .dan {
+    background-color: var(--red);
+}
+
+.pageBody .item .desc .ji {
+    background-color: var(--yellow);
+}
+
+.pageBody .item .desc .kcal {
+    background-color: var(--sky);
+}
+
+.pageBody .item .desc .once {
+    background-color: var(--blue-gray);
+}
+
+.pageBody .userInfo {
+    color: white;
+}
+
+.pageBody .userInfo .defaultInfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.pageBody .userInfo .defaultInfo .userImg {
+    margin-right: 24px;
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    background-color: var(--blue-black);
+}
+
+.pageBody .userInfo .defaultInfo .userName {
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.pageBody .userInfo .defaultInfo .userName h1 {
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.pageBody .userInfo .defaultInfo .userName p {
+    margin: 0;
+    color: var(--blue-white);
+}
+
+.pageBody .userInfo .bodyInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+    color: var(--blue-black);
+    background-color: white;
+    border-radius: 4px 4px 0 0;
+}
+
+.pageBody .userInfo .bodyInfo div {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 0 8px;
+}
+
+.pageBody .userInfo .bodyInfo div span {
+    font-size: 16px;
+    font-weight: 500;
+    vertical-align: middle;
+}
+
+.pageBody .userInfo .changeBodyInfo {
+    width: 100%;
+    padding: 12px;
+    border-radius: 0 0 4px 4px;
+    font-size: 16px;
+    color: white;
+    background: var(--blue-dark);
+    border: none;
+    margin-bottom: 16px;
+}
+
+.pageBody .userInfo .changeBodyInfo:hover {
+    background-color: var(--blue-light);
+}
+
+.pageBody .boardList {
+    display: flex;
+    flex-direction: column;
+    color: var(--blue-black);
+    padding: 12px 20px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.pageBody .boardList .board {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--blue-gray);
+    font-weight: bold;
+}
+
+.pageBody .boardList .board:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.pageBody .boardList .board span {
+    padding: 0 16px;
+}
+
+.pageBody .signform {
+    color: white;
+}
+
+.pageBody .signform p {
+    padding: 0;
+    margin: 0;
+}
+
+.pageBody .signform input {
+    width: 100%;
+    padding: 16px;
+    height: 40px;
+    border: 1px solid var(--blue-white);
+    border-radius: 22px;
+    margin: 12px 0;
+}
+
+
+
+.nav {
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    align-self: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+    z-index: 11;
+}
+
+.container {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px var(--blue-white);
+    z-index: 10;
+}
+
+.graph {
+    display: flex;
+    justify-content: space-around;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar {
+    margin: 8px;
+    display: block;
+    width: 12px;
+    height: 60px;
+    background: linear-gradient(to bottom, var(--blue), var(--blue-dark));
+    border-radius: 4px;
+}
+
+.menu {
+    display: flex;
+    position: fixed;
+    padding: 12px;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: white;
+    justify-content: space-between;
+    box-shadow: 0px 0px 4px var(--blue-gray);
+    border-radius: 16px;
+    z-index: 1100;
+}
+.menu .link span {
+    font-size: 56px;
+    margin: 0;
+}
+
+.listpost {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    transform: translate(0, 0);
+    width: 64px;
+    height: 64px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0px 0px 4px var(--blue-gray);
+    z-index: 1100;
+    font-size: 24px;
+    color: var(--blue-black);
+    background-color: white;
+}
+.listpost:hover {
+    color: white;
+    background-color: var(--blue);
+}
+.listpost span{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    min-width: 300px;
+    padding: 20px;
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: auto;
+    z-index: 1301;
+    background-color: var(--blue-white);
+    border-radius: 8px;
+}
+.modal form {
+    width: 100%;
+    padding: 0;
+}
+.modal form p {
+    margin: 12px 8px;
+    display: flex;
+    align-items: center;
+}
+.modal form p span {
+    font-size: 16px;
+    margin-right: 8px;
+}
+.modal form input {
+    width: 100%;
+    height: 36px;
+    padding: 8px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+}
+.modal form select {
+    width: 100%;
+    height: 36px;
+    padding: 8px 20px;
+    padding-right: 40px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    -webkit-appearance: none;
+}
+.modal form > input:last-child {
+    background-color: var(--blue);
+    height: 56px;
+    color: white;
+    margin-bottom: 0;
+}
+.modal form .date-selecter {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.modal form .date-selecter input {
+    flex: 1;
+}
+.modal form input:first-child {
+    flex: 1.5;
+}
+.modal form input:nth-child(2) {
+    margin: 8px;
+}
+.modal form input:last-child {
+    flex: 1;
+}
+
+.modal-bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 1300;
+    background-color: var(--blue-black);
+    opacity: 0.7;
+}
+
+.loading {
+    display: none;
+    position: fixed;
+    padding: 20px;
+    opacity: 1;
+    flex-direction: column;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    height: 400px;
+    z-index: 2000;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.loading .spinner {
+    display: block;
+    margin: 24px auto;
+    width: 100px;
+    height: 100px;
+    border: 8px solid var(--blue-gray);
+    border-top: 8px solid var(--blue-white);
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+}
+.loading .wrap {
+    display: flex;
+    justify-content:space-around;
+    margin-bottom: 20px;
+}
+.loading .state {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+    animation: pop 0.5s ease-in-out infinite;
+}
+.loading .state:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.loading .state:nth-child(3) {
+    animation-delay: 0.2s;
+}
+.loading .state:nth-child(4) {
+    animation-delay: 0.3s;
+}
+.loading .state:nth-child(5) {
+    animation-delay: 0.4s;
+}
+.loading .loading-text {
+    width: 100%;
+    text-align: center;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes pop {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(0, -200%); }
+    100% { transform: translate(0, 0); }
+}
+
+.show {
+    display: flex;
 }

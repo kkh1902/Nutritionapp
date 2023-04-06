@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include ./head.ejs%>  
+</head>
+<body class="addFood">
+    <div class="pageHeader">
+        <div class="navbar">
+            <a class="funcBtn" href="/"><span class="material-icons">arrow_back</span></a>
+            <span class="title">캘린더</span>
+        </div>
+        <div class="input">
+            <form action="addfood" method="post">
+                <div class="input-row">
+                    <input type="text" name="food_name" placeholder="음식을 입력해주세요.">
+                    <button class="search" type="submit">검색</button>
+                </div>
+                <div class="search-option">
+                    <input id="opt1" type="checkbox" name="opt1" value="checked"><label for="opt1">단어가 포함된 결과로 검색하기</label>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="pageBody">
+    </div>
+    <div class="loading">
+        <div class="wrapper">
+            <div class="spinner"></div>
+        </div>
+        <p>페이지를 불러오는 중입니다...</p>
+    </div>
+    <div class="modal-bg"></div>
+    <script>
+        $(document).ready(function () {
+            $('.item').click(function () {
+                $('.modal').toggleClass('show');
+                $('.modal-bg').toggleClass('show');
+                $('.modal-title').text($(this).find('.title-text').text());
+                $('.food_name').val($(this).find('.title-text').text());
+            });
+            $('.search').click(function () {
+                $('.loading').toggleClass('show');
+                $('.modal-bg').toggleClass('show');
+            })
+            $('.modal-bg').click(function () {
+                $(this).toggleClass('show');
+                $('.modal').toggleClass('show');
+            });
+        });
+    </script>
+</body>
+</html>

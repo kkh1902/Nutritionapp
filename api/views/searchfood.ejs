@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include ./head.ejs%>  
+</head>
+<body class="addFood">
+    <div class="pageHeader">
+        <div class="navbar">
+            <a class="funcBtn" href="/"><span class="material-icons">arrow_back</span></a>
+            <span class="title">영양소 검색</span>
+            <a class="linkBtn" href="/listfood"><span class="material-icons">ballot</span></a>
+        </div>
+        <div class="input">
+            <form action="searchfood" method="post">
+                <div class="input-row">
+                    <input type="text" name="food_name" placeholder="음식을 입력해주세요.">
+                    <button class="search" type="submit">검색</button>
+                </div>
+                <div class="search-option">
+                    <input id="opt1" type="checkbox" name="opt1" value="checked">
+                    <label for="opt1">단어가 포함된 결과로 검색하기</label>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="pageBody">
+        <div class="itemList">
+            <span>
+                <span class="material-icons">format_list_bulleted</span>
+                총 <%=food.length%>개의 결과
+            </span>
+        </div>
+        <%for(let data of food){%>
+        <form id="addFood" action="searchfood" method="post">
+            <div class="item">
+                <div class="title">
+                    <span class="material-icons">restaurant_menu</span>
+                    <span class="title-text"><%=data.food_name%></span>
+                </div>
+                <div class="desc">
+                    <span class="tan"><%=data.tan%>g</span>
+                    <span class="dan"><%=data.dan%>g</span>
+                    <span class="ji"><%=data.fat%>g</span>
+                    <span class="kcal"><%=data.kcal%>Kcal</span>
+                    <span class="once"><%=data.food_once%>g</span>
+                </div>
+            </div>
+        </form>
+        <%}%>
+    </div>
+    <div class="modal">
+        <form action="listfood/update" method="post">
+            <h3>정보를 입력해주세요.</h3>
+            <h5 class="modal-title">음식이름</h5>
+            <input class="food_name" type="hidden" name="food_name" value="">
+            <p><span class="material-icons">rice_bowl</span>수량(단위 : 인분)</p>
+            <input type="number" name="food_amount" value="1" min="1">
+            <p><span class="material-icons">schedule</span>식사시간</p>
+            <select name="meal_time">
+                <option hidden="" disabled="disabled" selected="selected" value="">선택하세요...</option>
+                <option value="아침">아침</option>
+                <option value="점심">점심</option>
+                <option value="저녁">저녁</option>
+            </select>
+            <input type="submit" value="추가">
+        </form>
+    </div>
+    <div class="loading">
+        <!-- <div class="spinner"></div> -->
+        <div class="wrap">
+            <div class="state"></div>
+            <div class="state"></div>
+            <div class="state"></div>
+            <div class="state"></div>
+            <div class="state"></div>
+        </div>
+        <p class="loading-text">음식 데이터를 불러오는 중입니다.</p>
+    </div>
+    <div class="modal-bg"></div>
+    <script>
+        $(document).ready(function () {
+            $('.item').click(function () {
+                $('.modal').toggleClass('show');
+                $('.modal-bg').toggleClass('show');
+                $('.modal-title').text($(this).find('.title-text').text());
+                $('.food_name').val($(this).find('.title-text').text());
+            });
+            $('.search').click(function () {
+                $('.loading').toggleClass('show');
+                $('.modal-bg').toggleClass('show');
+            })
+            $('.modal-bg').click(function () {
+                $(this).toggleClass('show');
+                $('.modal').toggleClass('show');
+            });
+        });
+    </script>
+</body>
+</html>
